@@ -9,14 +9,12 @@ body {
 	font-style: normal;
 }
 
-@media (max-width: 375px) {
-	html {
-		overflow-x: hidden;
-	}
+html {
+	overflow-x: hidden;
+}
 
-	body {
-		overflow-x: hidden;
-	}
+body {
+	overflow-x: hidden;
 }
 
 .wrapper {
@@ -75,6 +73,7 @@ a {
 	background-color: #0F3739;
 	z-index: 50;
 	box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
 }
 
 @media (max-width: 375px) {
@@ -236,6 +235,158 @@ a {
 	cursor: pointer;
 }
 
+.nav {
+	position: fixed;
+	top: 0;
+	right: -535px;
+	height: 100vh;
+	width: 535px;
+	z-index: 100;
+	background-color: #0F3739;
+	backdrop-filter: blur(100px);
+	transition: transform 0.3s ease-out;
+}
+
+.open {
+	transform: translateX(-535px);
+}
+
+.nav_btn {
+	position: absolute;
+	top: 35px;
+	right: 70px;
+	width: 28px;
+	height: 28px;
+	background: transparent;
+	border: none;
+}
+
+.nav_btn:hover {
+	cursor: pointer;
+}
+
+.nav_btn::before,
+.nav_btn::after {
+	position: absolute;
+	content: '';
+	top: 0;
+	height: 28px;
+	width: 2px;
+	background-color: #FFFFFF;
+}
+
+.nav_btn:before {
+	transform: rotate(45deg);
+}
+
+.nav_btn:after {
+	transform: rotate(-45deg);
+}
+
+.nav_list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 35px;
+	padding: 125px 70px 0 0;
+}
+
+.nav_item {
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: right;
+}
+
+.nav_link {
+	color: #FFFFFF;
+	transition: 0.3s;
+}
+
+.nav_link:hover {
+	font-weight: 700;
+}
+
+.guest_card {
+	display: inline-block;
+	background-image: url(assets/icons/guest-card.svg);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	width: 262px;
+}
+
+.nav_social {
+	margin: 70px 0 0 190px;
+}
+
+.nav.open~.overlay::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #000;
+	opacity: 0.6;
+	z-index: 70;
+}
+
+/*----------------SLIDER----------------*/
+
+.slick-list {
+	overflow: hidden;
+	height: 630px;
+	border-radius: 12px;
+}
+
+.slick-track {
+	display: flex;
+	height: 630px;
+}
+
+.preview_slider .slick-dots {
+	visibility: hidden;
+	margin: 0 auto;
+	position: relative;
+	bottom: 27px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 120px;
+}
+
+@media (max-width: 992px) {
+	.preview_slider .slick-dots {
+		visibility: visible;
+	}
+}
+
+.preview_slider .slick-dots li {
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.preview_slider .slick-dots button {
+	font-size: 0;
+	width: 10px;
+	height: 10px;
+	background-color: #FFFFFF;
+	border: 0;
+	opacity: 0.6;
+	border-radius: 50%;
+}
+
+.preview_slider .slick-dots button:hover {
+	cursor: pointer;
+}
+
+.preview_slider .slick-dots li.slick-active button {
+	width: 12px;
+	height: 12px;
+	opacity: 1;
+}
+
 /*----------------PREVIEW----------------*/
 
 .preview {
@@ -263,7 +414,6 @@ a {
 		background-repeat: no-repeat;
 	}
 }
-
 
 .preview_img {
 	height: 630px;

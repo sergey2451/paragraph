@@ -14,318 +14,363 @@
 </head>
 
 <body>
-	<header class="header">
-		<div class="header_wrapper">
-			<div class="dropdown">
-				<p class="dropdown_text">Брест</p>
-				<div class="header_arrow"></div>
-			</div>
-			<a href="#" class="logo_link">
-				<div class="logo"></div>
-			</a>
-			<div class="burger_container">
-				<div class="burger"></div>
-			</div>
-		</div>
-	</header>
-	<main class="main">
-		<section class="preview">
-			<div class="wrapper">
-				<div class="preview__img_container">
-					<img class="preview_img" src="assets/images/preview-image.png" alt="preview-image">
+	<aside class="nav" id="nav">
+		<button class="nav_btn" id="nav_btn"></button>
+		<ul class="nav_list">
+			<li class="nav_item"><a href="#preview" class="nav_link">Акции</a></li>
+			<li class="nav_item"><a href="#coffee_houses" class="nav_link">Кофейни</a></li>
+			<li class="nav_item"><a href="#menu" class="nav_link">Меню</a></li>
+			<li class="nav_item"><a href="" class="nav_link">Кофе</a></li>
+			<li class="nav_item"><a href="#confectionery" class="nav_link">Кондитерская</a></li>
+			<li class="nav_item"><a href="#mobile_app" class="nav_link">Приложение</a></li>
+			<li class="nav_item"><a href="#footer" class="nav_link">Контакты</a></li>
+			<li class="nav_item"><a href="" class="nav_link guest_card">Карта гостя</a></li>
+		</ul>
+		<ul class="footer_social nav_social">
+			<li class="footer__social_item"><a href="#" class="tripadviser_link"></a></li>
+			<li class="footer__social_item"><a href="#" class="inst_link"></a></li>
+			<li class="footer__social_item"><a href="#" class="vk_link"></a></li>
+			<li class="footer__social_item"><a href="#" class="fb_link"></a></li>
+			<li class="footer__social_item"><a href="#" class="tg_link"></a></li>
+		</ul>
+	</aside>
+	<div class="overlay" id="overlay">
+		<header class="header">
+			<div class="header_wrapper">
+				<div class="dropdown">
+					<p class="dropdown_text">Брест</p>
+					<div class="header_arrow"></div>
 				</div>
-				<div class="dots">
-					<button class="dot"></button>
-					<button class="dot active_dot"></button>
-					<button class="dot"></button>
-					<button class="dot"></button>
-					<button class="dot"></button>
-					<button class="dot"></button>
-				</div>
-				<div class="submenu">
-					<ul class="submenu_list">
-						<li class="submenu_item"><a class="submenu_link" href="#">Завтраки</a></li>
-						<li class="submenu_item active_text"><a class="submenu_link" href="#">Мобильное приложение</a></li>
-						<li class="submenu_item"><a class="submenu_link" href="#">Кофе в зёрнах</a></li>
-						<li class="submenu_item"><a class="submenu_link" href="#">Круассаны</a></li>
-						<li class="submenu_item"><a class="submenu_link" href="#">Новый какао</a></li>
-					</ul>
+				<a href="#" class="logo_link">
+					<div class="logo"></div>
+				</a>
+				<div class="burger_container">
+					<div class="burger" id="burger"></div>
 				</div>
 			</div>
-		</section>
-		<section class="coffee_houses">
-			<div class="wrapper coffee__houses_wrapper">
-				<h2 class="coffee__houses_title">Кофейни</h2>
-				<div class="coffee__houses_dropdown">
-					<p class="coffee__houses_dropdown-text">Брест</p>
-					<div class="arrow"></div>
-				</div>
-				<div class="coffee__houses_buttons">
-					<button class="coffee__houses_btn active_btn">Наши адреса</button>
-					<button class="coffee__houses_btn">На карте</button>
-				</div>
-				<div class="coffee__houses_photos">
-					<a href="#" class="coffee__house_address">
-						<div class="figure">
-							<img class="figure_img" src="assets/images/1.png" alt="coffee__house_1">
-							<div class="figcaption">
-								<p class="figcaption__text_address">Карбышева, 32</p>
-								<div style="margin-bottom: 30px;">
-									<p class="figcaption__text_time">Открыто до <span style="font-weight: 600;">23:00</span></p>
-									<img src="assets/icons/angle-down-1.svg" alt="angle-down-1">
-								</div>
-							</div>
+		</header>
+		<main class="main">
+			<section class="preview" id="preview">
+				<div class="wrapper">
+					<div class="preview_slider">
+						<div class="preview__slider_item">
+							<img src="assets/images/preview_img-1.png" alt="">
 						</div>
-					</a>
-					<a href="#" class="coffee__house_address">
-						<div class="figure">
-							<img class="figure_img" src="assets/images/2.png" alt="coffee__house_2">
-							<div class="figcaption">
-								<p class="figcaption__text_address">Советская, 30</p>
-								<div style="margin-bottom: 30px;">
-									<p class="figcaption__text_time">Открыто до <span style="font-weight: 600;">23:00</span></p>
-									<img src="assets/icons/angle-down-1.svg" alt="angle-down-1">
-								</div>
-							</div>
+						<div class="preview__slider_item">
+							<img src="assets/images/preview_img-2.png" alt="">
 						</div>
-					</a>
-					<a href="#" class="coffee__house_address">
-						<div class="figure">
-							<img class="figure_img" src="assets/images/3.png" alt="coffee__house_3">
-							<div class="figcaption">
-								<p class="figcaption__text_address">Советская, 66</p>
-								<div style="margin-bottom: 30px;">
-									<p class="figcaption__text_time">Открыто до <span style="font-weight: 600;">23:00</span></p>
-									<img src="assets/icons/angle-down-1.svg" alt="angle-down-1">
-								</div>
-							</div>
+						<div class="preview__slider_item">
+							<img src="assets/images/preview_img-3.png" alt="">
 						</div>
-					</a>
-					<a href="#" class="coffee__house_address">
-						<div class="figure">
-							<img class="figure_img" src="assets/images/4.png" alt="coffee__house_4">
-							<div class="figcaption">
-								<p class="figcaption__text_address">Набережная Ф. Скорины, 2</p>
-								<div style="margin-bottom: 30px;">
-									<p class="figcaption__text_time">Открыто до <span style="font-weight: 600;">23:00</span></p>
-									<img src="assets/icons/angle-down-1.svg" alt="angle-down-1">
-								</div>
-							</div>
+						<div class="preview__slider_item">
+							<img src="assets/images/preview_img-4.png" alt="">
 						</div>
-					</a>
-					<a href="#" class="coffee__house_address">
-						<div class="figure">
-							<img class="figure_img" src="assets/images/5.png" alt="coffee__house_5">
-							<div class="figcaption">
-								<p class="figcaption__text_address">Орловская, 10</p>
-								<div style="margin-bottom: 30px;">
-									<p class="figcaption__text_time">Открыто до <span style="font-weight: 600;">23:00</span></p>
-									<img src="assets/icons/angle-down-1.svg" alt="angle-down-1">
-								</div>
-							</div>
+						<div class="preview__slider_item">
+							<img src="assets/images/preview_img-5.png" alt="">
 						</div>
-					</a>
-				</div>
-			</div>
-		</section>
-		<section class="menu">
-			<div class="menu_wrapper">
-				<h2 class="menu_title">Меню в Бресте</h2>
-				<div class="menu_slider">
-					<ul class="menu__slider_wrapper">
-						<li class="menu_slide">
-							<div class="menu_slide-2"></div>
-						</li>
-						<li class="menu_slide">
-							<div class="menu_slide-3"></div>
-						</li>
-						<li class="menu_slide">
-							<div class="menu_slide-1"></div>
-						</li>
-						<li class="menu_slide">
-							<div class="menu_slide-4"></div>
-						</li>
-					</ul>
-				</div>
-				<div class="menu_buttons">
-					<button class="square_btn" style="background-image: url(assets/icons/arrow-left.svg);"></button>
-					<button class="square_btn" style="background-image: url(assets/icons/arrow-right.svg);"></button>
-				</div>
-				<div class="wrapper food_wrapper">
-					<div class="food">
-						<ul class="food_list">
-							<li class="food_item food__link_active"><a href="#" class="food_link">Десерты</a></li>
-							<li class="food_item"><a href="#" class="food_link">Еда</a></li>
-							<li class="food_item"><a href="#" class="food_link">Мороженое</a></li>
-							<li class="food_item"><a href="#" class="food_link">Напитки</a></li>
-						</ul>
 					</div>
-					<div class="food_images">
-						<a href="#" class="food__images_link">
-							<div class="food_figure">
-								<img class="figure_img" src="assets/images/food-3.png" alt="food-1">
-								<figcaption class="food_figcaption">
-									<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
-								</figcaption>
-							</div>
-						</a>
-						<a href="#" class="food__images_link">
-							<div class="food_figure">
-								<img class="figure_img" src="assets/images/food-4.png" alt="food-1">
-								<figcaption class="food_figcaption">
-									<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
-								</figcaption>
-							</div>
-						</a>
-						<a href="#" class="food__images_link">
-							<div class="food_figure">
-								<img class="figure_img" src="assets/images/food-2.png" alt="food-1">
-								<figcaption class="food_figcaption">
-									<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
-								</figcaption>
-							</div>
-						</a>
-						<a href="#" class="food__images_link">
-							<div class="food_figure">
-								<img class="figure_img" src="assets/images/food-1.png" alt="food-1">
-								<figcaption class="food_figcaption">
-									<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
-								</figcaption>
-							</div>
-						</a>
-						<a href="#" class="food__images_link">
-							<div class="food_figure">
-								<img class="figure_img" src="assets/images/food-5.png" alt="food-1">
-								<figcaption class="food_figcaption">
-									<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
-								</figcaption>
-							</div>
-						</a>
-						<a href="#" class="food__images_link">
-							<div class="food_figure">
-								<img class="figure_img" src="assets/images/food-3.png" alt="food-1">
-								<figcaption class="food_figcaption">
-									<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
-								</figcaption>
-							</div>
-						</a>
-						<a href="#" class="food__images_link figure_none">
-							<div class="food_figure">
-								<img class="figure_img" src="assets/images/food-2.png" alt="food-1">
-								<figcaption class="food_figcaption">
-									<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
-								</figcaption>
-							</div>
-						</a>
-						<a href="#" class="food__images_link figure_none">
-							<div class="food_figure">
-								<img class="figure_img" src="assets/images/food-1.png" alt="food-1">
-								<figcaption class="food_figcaption">
-									<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
-								</figcaption>
-							</div>
-						</a>
-						<a href="#" class="food__images_link figure_none">
-							<div class="food_figure">
-								<img class="figure_img" src="assets/images/food-5.png" alt="food-1">
-								<figcaption class="food_figcaption">
-									<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
-								</figcaption>
-							</div>
-						</a>
-					</div>
-					<div class="food__btn_wrapper">
-						<button class="rectangle_btn food_btn">Показать больше</button>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="confectionery">
-			<div class="wrapper">
-				<h2 class="confectionery_title">Кондитерская</h2>
-				<div class="confectionery_content">
-					<div class="confectionery__img_container">
-						<img class="confectionery_img" src="assets/images/confectionery-img.png" alt="confectionery-img">
-					</div>
-					<div class="dots-confectionery">
+					<!-- <div class="preview__img_container">
+						<img class="preview_img" src="assets/images/preview-image.png" alt="preview-image">
+					</div> -->
+					<!-- <div class="dots">
+						<button class="dot"></button>
 						<button class="dot active_dot"></button>
 						<button class="dot"></button>
 						<button class="dot"></button>
 						<button class="dot"></button>
 						<button class="dot"></button>
-						<button class="dot"></button>
-					</div>
-					<ul class="confectionery_list">
-						<li class="confectionery_item confectionery__item_active"><a href="" class="confectionery_link">Команда</a>
-						</li>
-						<li class="confectionery_item"><a href="" class="confectionery_link">Сырники</a></li>
-						<li class="confectionery_item"><a href="" class="confectionery_link">Круассаны</a></li>
-						<li class="confectionery_item"><a href="" class="confectionery_link">Торты</a></li>
-						<li class="confectionery_item"><a href="" class="confectionery_link">Киши</a></li>
-						<li class="confectionery_item"><a href="" class="confectionery_link">Праздник</a></li>
-					</ul>
-					<p class="confectionery_subtitle">Мы создали собственное производство десертов, которые готовим с большой
-						любовью для вас только из натуральных ингредиентов. Наша команда ежедневно работает над тем, чтобы
-						продолжать радовать вас новыми вкусами.</p>
-				</div>
-				<div class="confectionery_order">
-					<p class="confectionery__order_text">Всю продукцию можно приобрести на <a href="#"
-							class="confectionery__order_link">paragraphcake.by</a></p>
-					<button class="rectangle_btn confectionery__order_btn">Посмотреть и заказать</button>
-				</div>
-			</div>
-		</section>
-		<section class="mobile_app">
-			<div class="mobile__app_wrapper">
-				<h2 class="mobile__app_title">Мобильное приложение</h2>
-				<div class="mobile__app_content">
-					<div class="mobile__app_left-column">
-						<p class="mobile__app_text">Становитесь участником нашей программы лояльности:</p>
-						<ul class="mobile__app_list">
-							<li class="mobile__app_item"><span class="bold_text">Кэшбэк</span> на баланс</li>
-							<li class="mobile__app_item"><span class="bold_text">Особенные</span> предложения</li>
-							<li class="mobile__app_item"><span class="bold_text">Скидки</span> каждый день</li>
-							<li class="mobile__app_item"><span class="bold_text">Подарки</span> для друзей</li>
-							<li class="mobile__app_item"><span class="bold_text">Бонусы</span> для каждого</li>
+					</div> -->
+					<div class="submenu">
+						<ul class="submenu_list">
+							<li class="submenu_item active_text"><a class="submenu_link" href="#">Мобильное приложение</a></li>
+							<li class="submenu_item"><a class="submenu_link" href="#">Завтраки</a></li>
+							<li class="submenu_item"><a class="submenu_link" href="#">Кофе в зёрнах</a></li>
+							<li class="submenu_item"><a class="submenu_link" href="#">Круассаны</a></li>
+							<li class="submenu_item"><a class="submenu_link" href="#">Новый какао</a></li>
 						</ul>
-						<div class="mobile__app_icons">
-							<a href="#" class="mobile__app_icons_link"><img src="assets/icons/Google Play.svg" alt="google-play"></a>
-							<a href="#" class="mobile__app_icons_link"><img src="assets/icons/App Store.svg" alt="app-store"></a>
-						</div>
-						<button class="mobile__app_btn">Программа лояльности</button>
 					</div>
-					<div class="mobile__app_img"></div>
+				</div>
+			</section>
+			<section class="coffee_houses" id="coffee_houses">
+				<div class="wrapper coffee__houses_wrapper">
+					<h2 class="coffee__houses_title">Кофейни</h2>
+					<div class="coffee__houses_dropdown">
+						<p class="coffee__houses_dropdown-text">Брест</p>
+						<div class="arrow"></div>
+					</div>
+					<div class="coffee__houses_buttons">
+						<button class="coffee__houses_btn active_btn">Наши адреса</button>
+						<button class="coffee__houses_btn">На карте</button>
+					</div>
+					<div class="coffee__houses_photos">
+						<a href="#" class="coffee__house_address">
+							<div class="figure">
+								<img class="figure_img" src="assets/images/1.png" alt="coffee__house_1">
+								<div class="figcaption">
+									<p class="figcaption__text_address">Карбышева, 32</p>
+									<div style="margin-bottom: 30px;">
+										<p class="figcaption__text_time">Открыто до <span style="font-weight: 600;">23:00</span></p>
+										<img src="assets/icons/angle-down-1.svg" alt="angle-down-1">
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="coffee__house_address">
+							<div class="figure">
+								<img class="figure_img" src="assets/images/2.png" alt="coffee__house_2">
+								<div class="figcaption">
+									<p class="figcaption__text_address">Советская, 30</p>
+									<div style="margin-bottom: 30px;">
+										<p class="figcaption__text_time">Открыто до <span style="font-weight: 600;">23:00</span></p>
+										<img src="assets/icons/angle-down-1.svg" alt="angle-down-1">
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="coffee__house_address">
+							<div class="figure">
+								<img class="figure_img" src="assets/images/3.png" alt="coffee__house_3">
+								<div class="figcaption">
+									<p class="figcaption__text_address">Советская, 66</p>
+									<div style="margin-bottom: 30px;">
+										<p class="figcaption__text_time">Открыто до <span style="font-weight: 600;">23:00</span></p>
+										<img src="assets/icons/angle-down-1.svg" alt="angle-down-1">
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="coffee__house_address">
+							<div class="figure">
+								<img class="figure_img" src="assets/images/4.png" alt="coffee__house_4">
+								<div class="figcaption">
+									<p class="figcaption__text_address">Набережная Ф. Скорины, 2</p>
+									<div style="margin-bottom: 30px;">
+										<p class="figcaption__text_time">Открыто до <span style="font-weight: 600;">23:00</span></p>
+										<img src="assets/icons/angle-down-1.svg" alt="angle-down-1">
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="coffee__house_address">
+							<div class="figure">
+								<img class="figure_img" src="assets/images/5.png" alt="coffee__house_5">
+								<div class="figcaption">
+									<p class="figcaption__text_address">Орловская, 10</p>
+									<div style="margin-bottom: 30px;">
+										<p class="figcaption__text_time">Открыто до <span style="font-weight: 600;">23:00</span></p>
+										<img src="assets/icons/angle-down-1.svg" alt="angle-down-1">
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="menu" id="menu">
+				<div class="menu_wrapper">
+					<h2 class="menu_title">Меню в Бресте</h2>
+					<div class="menu_slider">
+						<ul class="menu__slider_wrapper">
+							<li class="menu_slide">
+								<div class="menu_slide-2"></div>
+							</li>
+							<li class="menu_slide">
+								<div class="menu_slide-3"></div>
+							</li>
+							<li class="menu_slide">
+								<div class="menu_slide-1"></div>
+							</li>
+							<li class="menu_slide">
+								<div class="menu_slide-4"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="menu_buttons">
+						<button class="square_btn" style="background-image: url(assets/icons/arrow-left.svg);"></button>
+						<button class="square_btn" style="background-image: url(assets/icons/arrow-right.svg);"></button>
+					</div>
+					<div class="wrapper food_wrapper">
+						<div class="food">
+							<ul class="food_list">
+								<li class="food_item food__link_active"><a href="#" class="food_link">Десерты</a></li>
+								<li class="food_item"><a href="#" class="food_link">Еда</a></li>
+								<li class="food_item"><a href="#" class="food_link">Мороженое</a></li>
+								<li class="food_item"><a href="#" class="food_link">Напитки</a></li>
+							</ul>
+						</div>
+						<div class="food_images">
+							<a href="#" class="food__images_link">
+								<div class="food_figure">
+									<img class="figure_img" src="assets/images/food-3.png" alt="food-1">
+									<figcaption class="food_figcaption">
+										<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
+									</figcaption>
+								</div>
+							</a>
+							<a href="#" class="food__images_link">
+								<div class="food_figure">
+									<img class="figure_img" src="assets/images/food-4.png" alt="food-1">
+									<figcaption class="food_figcaption">
+										<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
+									</figcaption>
+								</div>
+							</a>
+							<a href="#" class="food__images_link">
+								<div class="food_figure">
+									<img class="figure_img" src="assets/images/food-2.png" alt="food-1">
+									<figcaption class="food_figcaption">
+										<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
+									</figcaption>
+								</div>
+							</a>
+							<a href="#" class="food__images_link">
+								<div class="food_figure">
+									<img class="figure_img" src="assets/images/food-1.png" alt="food-1">
+									<figcaption class="food_figcaption">
+										<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
+									</figcaption>
+								</div>
+							</a>
+							<a href="#" class="food__images_link">
+								<div class="food_figure">
+									<img class="figure_img" src="assets/images/food-5.png" alt="food-1">
+									<figcaption class="food_figcaption">
+										<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
+									</figcaption>
+								</div>
+							</a>
+							<a href="#" class="food__images_link">
+								<div class="food_figure">
+									<img class="figure_img" src="assets/images/food-3.png" alt="food-1">
+									<figcaption class="food_figcaption">
+										<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
+									</figcaption>
+								</div>
+							</a>
+							<a href="#" class="food__images_link figure_none">
+								<div class="food_figure">
+									<img class="figure_img" src="assets/images/food-2.png" alt="food-1">
+									<figcaption class="food_figcaption">
+										<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
+									</figcaption>
+								</div>
+							</a>
+							<a href="#" class="food__images_link figure_none">
+								<div class="food_figure">
+									<img class="figure_img" src="assets/images/food-1.png" alt="food-1">
+									<figcaption class="food_figcaption">
+										<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
+									</figcaption>
+								</div>
+							</a>
+							<a href="#" class="food__images_link figure_none">
+								<div class="food_figure">
+									<img class="figure_img" src="assets/images/food-5.png" alt="food-1">
+									<figcaption class="food_figcaption">
+										<p class="figcaption_text">Торт &#171Эстерхази&#187</p>
+									</figcaption>
+								</div>
+							</a>
+						</div>
+						<div class="food__btn_wrapper">
+							<button class="rectangle_btn food_btn">Показать больше</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="confectionery" id="confectionery">
+				<div class="wrapper">
+					<h2 class="confectionery_title">Кондитерская</h2>
+					<div class="confectionery_content">
+						<div class="confectionery__img_container">
+							<img class="confectionery_img" src="assets/images/confectionery-img.png" alt="confectionery-img">
+						</div>
+						<div class="dots-confectionery">
+							<button class="dot active_dot"></button>
+							<button class="dot"></button>
+							<button class="dot"></button>
+							<button class="dot"></button>
+							<button class="dot"></button>
+							<button class="dot"></button>
+						</div>
+						<ul class="confectionery_list">
+							<li class="confectionery_item confectionery__item_active"><a href=""
+									class="confectionery_link">Команда</a>
+							</li>
+							<li class="confectionery_item"><a href="" class="confectionery_link">Сырники</a></li>
+							<li class="confectionery_item"><a href="" class="confectionery_link">Круассаны</a></li>
+							<li class="confectionery_item"><a href="" class="confectionery_link">Торты</a></li>
+							<li class="confectionery_item"><a href="" class="confectionery_link">Киши</a></li>
+							<li class="confectionery_item"><a href="" class="confectionery_link">Праздник</a></li>
+						</ul>
+						<p class="confectionery_subtitle">Мы создали собственное производство десертов, которые готовим с большой
+							любовью для вас только из натуральных ингредиентов. Наша команда ежедневно работает над тем, чтобы
+							продолжать радовать вас новыми вкусами.</p>
+					</div>
+					<div class="confectionery_order">
+						<p class="confectionery__order_text">Всю продукцию можно приобрести на <a href="#"
+								class="confectionery__order_link">paragraphcake.by</a></p>
+						<button class="rectangle_btn confectionery__order_btn">Посмотреть и заказать</button>
+					</div>
+				</div>
+			</section>
+			<section class="mobile_app" id="mobile_app">
+				<div class="mobile__app_wrapper">
+					<h2 class="mobile__app_title">Мобильное приложение</h2>
+					<div class="mobile__app_content">
+						<div class="mobile__app_left-column">
+							<p class="mobile__app_text">Становитесь участником нашей программы лояльности:</p>
+							<ul class="mobile__app_list">
+								<li class="mobile__app_item"><span class="bold_text">Кэшбэк</span> на баланс</li>
+								<li class="mobile__app_item"><span class="bold_text">Особенные</span> предложения</li>
+								<li class="mobile__app_item"><span class="bold_text">Скидки</span> каждый день</li>
+								<li class="mobile__app_item"><span class="bold_text">Подарки</span> для друзей</li>
+								<li class="mobile__app_item"><span class="bold_text">Бонусы</span> для каждого</li>
+							</ul>
+							<div class="mobile__app_icons">
+								<a href="#" class="mobile__app_icons_link"><img src="assets/icons/Google Play.svg"
+										alt="google-play"></a>
+								<a href="#" class="mobile__app_icons_link"><img src="assets/icons/App Store.svg" alt="app-store"></a>
+							</div>
+							<button class="mobile__app_btn">Программа лояльности</button>
+						</div>
+						<div class="mobile__app_img"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer" id="footer">
+			<div class="footer_wrapper">
+				<div class="footer__firts_line">
+					<p class="footer__first_line_text">© 2022 ООО «ПараграфБрест»</p>
+					<p class="footer__first_line_text"><a href="#" class="office_link">office@paragraph.by</a></p>
+					<ul class="footer_social">
+						<li class="footer__social_item"><a href="#" class="tripadviser_link"></a></li>
+						<li class="footer__social_item"><a href="#" class="inst_link"></a></li>
+						<li class="footer__social_item"><a href="#" class="vk_link"></a></li>
+						<li class="footer__social_item"><a href="#" class="fb_link"></a></li>
+						<li class="footer__social_item"><a href="#" class="tg_link"></a></li>
+					</ul>
+				</div>
+				<div class="footer__second_line">
+					<p class="footer__second_line_text">Управляется <a href="https://alldata.pro/"
+							class="alldata_link">alldata.pro</a></p>
+					<ul class="footer__list">
+						<li class="footer__list_item"><a href="#" class="footer_link">Политика конфиденциальности</a></li>
+						<div class="circle"></div>
+						<li class="footer__list_item"><a href="#" class="footer_link">Программа лояльности</a></li>
+						<div class="circle"></div>
+						<li class="footer__list_item"><a href="#" class="footer_link">Партнёрам</a></li>
+						<div class="circle"></div>
+						<li class="footer__list_item"><a href="#" class="footer_link">Работа</a></li>
+					</ul>
 				</div>
 			</div>
-		</section>
-	</main>
-	<footer class="footer">
-		<div class="footer_wrapper">
-			<div class="footer__firts_line">
-				<p class="footer__first_line_text">© 2022 ООО «ПараграфБрест»</p>
-				<p class="footer__first_line_text"><a href="#" class="office_link">office@paragraph.by</a></p>
-				<ul class="footer_social">
-					<li class="footer__social_item"><a href="#" class="tripadviser_link"></a></li>
-					<li class="footer__social_item"><a href="#" class="inst_link"></a></li>
-					<li class="footer__social_item"><a href="#" class="vk_link"></a></li>
-					<li class="footer__social_item"><a href="#" class="fb_link"></a></li>
-					<li class="footer__social_item"><a href="#" class="tg_link"></a></li>
-			</div>
-			<div class="footer__second_line">
-				<p class="footer__second_line_text">Управляется <a href="https://alldata.pro/"
-						class="alldata_link">alldata.pro</a></p>
-				<ul class="footer__list">
-					<li class="footer__list_item"><a href="#" class="footer_link">Политика конфиденциальности</a></li>
-					<div class="circle"></div>
-					<li class="footer__list_item"><a href="#" class="footer_link">Программа лояльности</a></li>
-					<div class="circle"></div>
-					<li class="footer__list_item"><a href="#" class="footer_link">Партнёрам</a></li>
-					<div class="circle"></div>
-					<li class="footer__list_item"><a href="#" class="footer_link">Работа</a></li>
-				</ul>
-			</div>
-		</div>
-	</footer>
+		</footer>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>
