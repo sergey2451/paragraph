@@ -371,13 +371,6 @@ a {
 	}
 }
 
-@media (max-width: 375px) {
-	.preview_slider .slick-dots {
-		margin-top: 11px;
-		overflow: hidden;
-	}
-}
-
 .preview_slider .slick-dots li {
 	font-weight: 400;
 	font-size: 20px;
@@ -553,16 +546,6 @@ img {
 	height: 12px;
 	opacity: 1;
 }
-
-@media (max-width: 375px) {
-	.preview_img {
-		height: 375px;
-		background-image: url(assets/images/preview-image-375px.png);
-		background-repeat: no-repeat;
-	}
-}
-
-
 
 /*----------------COFFEE_HOUSES----------------*/
 
@@ -1394,7 +1377,7 @@ img {
 	}
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
 	.food__btn_wrapper {
 		width: 100%;
 		margin: 16px auto 0;
@@ -1416,7 +1399,7 @@ img {
 	transition: 0.5s;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
 	.rectangle_btn {
 		font-size: 16px;
 		line-height: 28px;
@@ -1434,6 +1417,7 @@ img {
 
 .confectionery_slider .slick-list {
 	overflow: hidden;
+	border-radius: 12px;
 }
 
 .confectionery_slider .slick-list .slick-track {
@@ -1456,14 +1440,16 @@ img {
 
 @media (max-width: 992px) {
 	.confectionery_slider .slick-dots {
-		margin-top: 18px;
+		justify-content: center;
+		margin-top: 15px;
 	}
-}
 
-@media (max-width: 375px) {
-	.confectionery_slider .slick-dots {
-		margin-top: 11px;
-		overflow: hidden;
+	.confectionery_slider .slick-dots li {
+		display: none;
+	}
+
+	.confectionery_slider .slick-dots li.slick-active {
+		display: block;
 	}
 }
 
@@ -1493,6 +1479,53 @@ img {
 .confectionery__slider_item img {
 	display: block;
 	width: 100%;
+}
+
+.wrapper .confectionery_content .confectionery_dots {
+	display: none;
+}
+
+@media (max-width: 992px) {
+	.wrapper .confectionery_content .confectionery_dots {
+		display: block;
+		position: relative;
+		bottom: 65px;
+	}
+}
+
+.wrapper .confectionery_content .confectionery_dots .slick-dots {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 120px;
+	height: 12px;
+}
+
+.wrapper .confectionery_content .confectionery_dots .slick-dots li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper .confectionery_content .confectionery_dots .slick-dots li button:hover {
+	cursor: pointer;
+}
+
+.wrapper .confectionery_content .confectionery_dots .slick-dots li.slick-active button {
+	width: 12px;
+	height: 12px;
+	opacity: 1;
+}
+
+.wrapper .confectionery_content .confectionery_dots .slick-dots li button {
+	font-size: 0;
+	width: 10px;
+	height: 10px;
+	background-color: #FFFFFF;
+	border: 0;
+	opacity: 0.6;
+	border-radius: 50%;
 }
 
 /*----------------CONFECTIONERY----------------*/

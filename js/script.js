@@ -55,10 +55,21 @@ $(document).ready(function() {
 		arrows: false,
 		dots: true,
 		autoplay: true,
+		asNavFor: '.confectionery_dots',
 
 		customPaging: function(slider, i) {
 			var item = $(slider.$slides[i]).data('item');
 			return item;
 		},
-	})
+	});
+
+	$('.confectionery_dots').slick({
+		arrows: false,
+        slidesToShow: 2,
+		dots: true,
+        asNavFor: '.confectionery_slider',
+        focusOnSelect: true,
+    });
 })
+
+document.getElementsByClassName('confectionery_subtitle').style.display = 'none';
