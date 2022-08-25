@@ -469,84 +469,6 @@ img {
 	}
 }
 
-@media (max-width: 375px) {
-	.preview__img_container {
-		width: 100%;
-		height: 375px;
-		background-image: url(assets/images/preview-image-375px.png);
-		background-repeat: no-repeat;
-	}
-}
-
-.preview_img {
-	height: 630px;
-	border-radius: 12px;
-	background-image: url(assets/images/preview-image.png);
-}
-
-@media (max-width: 1385px) {
-	.preview_img {
-		width: 100%;
-		height: auto;
-		background-size: cover;
-		background-position: center;
-	}
-}
-
-@media (max-width: 1226px) {
-	.preview_img {
-		background-position: right;
-	}
-}
-
-@media (max-width: 375px) {
-	.preview_img {
-		display: none;
-	}
-}
-
-.dots {
-	display: none;
-	margin: 0 auto;
-	position: relative;
-	bottom: 27px;
-	justify-content: space-between;
-	align-items: center;
-	width: 120px;
-	height: 12px;
-}
-
-@media (max-width: 992px) {
-	.dots {
-		display: flex;
-	}
-}
-
-@media (max-width: 375px) {
-	.dots {
-		display: flex;
-	}
-}
-
-.dot {
-	width: 10px;
-	height: 10px;
-	background: #FFFFFF;
-	opacity: 0.6;
-	border: 2.4px solid #FFFFFF;
-	border-radius: 15.6px;
-}
-
-.dot:hover {
-	cursor: pointer;
-}
-
-.active_dot {
-	width: 12px;
-	height: 12px;
-	opacity: 1;
-}
-
 /*----------------COFFEE_HOUSES----------------*/
 
 .coffee_houses {
@@ -861,6 +783,144 @@ img {
 	}
 }
 
+/*----------------MENU_SLIDER----------------*/
+
+/* .preview_slider .slick-list {
+	overflow: hidden;
+	border-radius: 12px;
+} */
+
+.menu_slider {
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.menu_slider .stick_list {
+	overflow: hidden;
+}
+
+.menu_slider .slick-list .slick-track {
+	display: flex;
+	position: relative;
+	max-width: 1300px;
+}
+
+.menu_slider .slick-list  .slick-track .menu__slider_item {
+	float: left;
+	margin-right: 20px;
+}
+
+.menu_slider .slick-list  .slick-track .menu__slider_item a img {
+	display: block;
+    width: 100%;
+}
+
+
+
+/* .preview_slider .slick-dots {
+	display: block;
+	padding: 0 100px;
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+} */
+
+@media (max-width: 1226px) {
+	.preview_slider .slick-dots {
+		padding: 0 65px;
+	}
+}
+
+@media (max-width: 992px) {
+	.preview_slider .slick-dots {
+		justify-content: center;
+		margin-top: 15px;
+	}
+
+	.preview_slider .slick-dots li {
+		display: none;
+	}
+
+	.preview_slider .slick-dots li.slick-active {
+		display: block;
+	}
+}
+
+.preview_slider .slick-dots li {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 23px;
+	opacity: 0.5;
+	color: #FFFFFF;
+}
+
+.preview_slider .slick-dots li:hover {
+	cursor: pointer;
+}
+
+@media (max-width: 992px) {
+	.preview_slider .slick-dots li {
+		font-size: 18px;
+	}
+}
+
+.preview_slider .slick-dots li.slick-active {
+	font-weight: 700;
+	opacity: 1;
+}
+
+.preview__slider_item img {
+	display: block;
+	width: 100%;
+}
+
+.wrapper .new_dots {
+	display: none;
+}
+
+@media (max-width: 992px) {
+	.wrapper .new_dots {
+		display: block;
+		position: relative;
+		bottom: 65px;
+	}
+}
+
+.wrapper .new_dots .slick-dots {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 120px;
+	height: 12px;
+}
+
+.wrapper .new_dots .slick-dots li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper .new_dots .slick-dots li button:hover {
+	cursor: pointer;
+}
+
+.wrapper .new_dots .slick-dots li.slick-active button {
+	width: 12px;
+	height: 12px;
+	opacity: 1;
+}
+
+.wrapper .new_dots .slick-dots li button {
+	font-size: 0;
+	width: 10px;
+	height: 10px;
+	background-color: #FFFFFF;
+	border: 0;
+	opacity: 0.6;
+	border-radius: 50%;
+}
+
 /*----------------MENU----------------*/
 
 .menu_wrapper {
@@ -896,6 +956,7 @@ img {
 	color: transparent;
 	-webkit-text-stroke: 2px #FFFFFF;
 	padding-top: 120px;
+	margin-bottom: 44px;
 }
 
 @media (max-width: 992px) {
@@ -939,7 +1000,7 @@ img {
 	}
 }
 
-.menu_slider {
+/* .menu_slider {
 	margin-top: 33px;
 	overflow-x: hidden;
 	position: relative;
@@ -1165,7 +1226,7 @@ img {
 		height: 444px;
 		background-image: url(assets/images/menu-4-375px.png);
 	}
-}
+} */
 
 .menu_buttons {
 	margin: 42px auto 0;

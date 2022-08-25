@@ -43,7 +43,6 @@ $(document).ready(function() {
 
 	$('.new_dots').slick({
 		arrows: false,
-        slidesToShow: 2,
 		dots: true,
         asNavFor: '.preview_slider',
         focusOnSelect: true,
@@ -65,11 +64,15 @@ $(document).ready(function() {
 
 	$('.confectionery_dots').slick({
 		arrows: false,
-        slidesToShow: 2,
 		dots: true,
         asNavFor: '.confectionery_slider',
         focusOnSelect: true,
     });
-})
+});
 
-document.getElementsByClassName('confectionery_subtitle').style.display = 'none';
+$(document).ready(function() {
+	$('.menu_slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+	});
+});
