@@ -27,10 +27,38 @@ burgerButton.addEventListener('click', addClassOpen);
 navAside.addEventListener('click', removeClassOpen);
 overlay.addEventListener('click', removeClassOpen);
 
+
 $(document).ready(function() {
 	$('.preview_slider').slick({
 		arrows: false,
 		dots: true,
 		autoplay: true,
+		asNavFor: '.new_dots',
+
+		customPaging: function(slider, i) {
+			var item = $(slider.$slides[i]).data('item');
+			return item;
+		},
 	});
+
+	$('.new_dots').slick({
+		arrows: false,
+        slidesToShow: 2,
+		dots: true,
+        asNavFor: '.preview_slider',
+        focusOnSelect: true,
+    });
+});
+
+$(document).ready(function() {
+	$('.confectionery_slider').slick({
+		arrows: false,
+		dots: true,
+		autoplay: true,
+
+		customPaging: function(slider, i) {
+			var item = $(slider.$slides[i]).data('item');
+			return item;
+		},
+	})
 })
