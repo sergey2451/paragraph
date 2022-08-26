@@ -114,8 +114,78 @@ $(document).ready(function(){
 	});
 });
 
-// if ($(window).width() < 1300) {
-// 	$(".owl-carousel").owlCarousel({
-// 		items: 8,
-// 	});
-// }
+const drinksItem = document.querySelector('#drinks_li');
+const dessertsItem = document.querySelector('#desserts_li');
+const foodItem = document.querySelector('#food_li');
+const coffeeItem = document.querySelector('#coffee_li');
+const cakesItem = document.querySelector('#cakes_li');
+const foodItems = document.querySelectorAll('.food_item');
+
+function addClassOpenActive(event) {
+	for(let i = 0; i < foodItems.length; i++) {
+		if (foodItems[i].classList.contains('food__item_active')) {
+			foodItems[i].classList.remove('food__item_active');
+		}
+	}
+
+
+
+	
+	event.target.classList.add('food__item_active');
+
+	if (drinksItem.classList.contains('food__item_active')) {
+		for (let i = 0; i < menuTabs.length; i++) {
+			if (menuTabs[i].classList.contains('grid')) {
+				menuTabs[i].classList.remove('grid');
+			}
+		}
+		
+		drinksTab.classList.add('grid');
+	} else if (dessertsItem.classList.contains('food__item_active')) {
+		for (let i = 0; i < menuTabs.length; i++) {
+			if (menuTabs[i].classList.contains('grid')) {
+				menuTabs[i].classList.remove('grid');
+			}
+		}
+
+		dessertsTab.classList.add('grid');
+	} else if (foodItem.classList.contains('food__item_active')) {
+		for (let i = 0; i < menuTabs.length; i++) {
+			if (menuTabs[i].classList.contains('grid')) {
+				menuTabs[i].classList.remove('grid');
+			}
+		}
+
+		foodTab.classList.add('grid');
+	} else if (coffeeItem.classList.contains('food__item_active')) {
+		for (let i = 0; i < menuTabs.length; i++) {
+			if (menuTabs[i].classList.contains('grid')) {
+				menuTabs[i].classList.remove('grid');
+			}
+		}
+
+		coffeeTab.classList.add('grid');
+	} else if (cakesItem.classList.contains('food__item_active')) {
+		for (let i = 0; i < menuTabs.length; i++) {
+			if (menuTabs[i].classList.contains('grid')) {
+				menuTabs[i].classList.remove('grid');
+			}
+		}
+
+		cakesTab.classList.add('grid');
+	}
+}
+
+drinksItem.addEventListener('click', addClassOpenActive);
+dessertsItem.addEventListener('click', addClassOpenActive);
+foodItem.addEventListener('click', addClassOpenActive);
+coffeeItem.addEventListener('click', addClassOpenActive);
+cakesItem.addEventListener('click', addClassOpenActive);
+
+
+const drinksTab = document.querySelector('#drinks-tab');
+const dessertsTab = document.querySelector('#desserts-tab');
+const foodTab = document.querySelector('#food-tab');
+const coffeeTab = document.querySelector('#coffee-tab');
+const cakesTab = document.querySelector('#cakes-tab');
+const menuTabs = document.querySelectorAll('.menu_tab');
