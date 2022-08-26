@@ -70,9 +70,52 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function() {
-	$('.menu_slider').slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+		margin: 20,
+		navText: ["",""],
+
+		responsive:{
+			0: {
+				items: 1,
+				loop: true,
+				stagePadding: 80,
+			},
+			321: {
+				items: 1,
+				loop: true,
+				stagePadding: 100,
+			},
+			480: {
+				items: 1,
+				loop: true,
+				stagePadding: 130,
+			},
+			578: {
+				items: 2,
+				loop: true,
+				stagePadding: 100,
+			},
+			768: {
+				items: 2,
+				loop: true,
+				stagePadding: 140,
+			},
+			991: {
+			items: 2,
+			loop: true,
+			stagePadding: 220,
+			},
+			1300: {
+			items:4
+			}
+		}
 	});
 });
+
+// if ($(window).width() < 1300) {
+// 	$(".owl-carousel").owlCarousel({
+// 		items: 8,
+// 	});
+// }

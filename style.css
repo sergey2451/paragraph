@@ -785,140 +785,110 @@ img {
 
 /*----------------MENU_SLIDER----------------*/
 
-/* .preview_slider .slick-list {
-	overflow: hidden;
-	border-radius: 12px;
-} */
-
 .menu_slider {
 	max-width: 1300px;
-	margin: 0 auto;
+	margin: 0 auto 130px;
 }
 
-.menu_slider .stick_list {
-	overflow: hidden;
+@media (max-width: 768px) {
+	.menu_slider {
+		margin: 0 auto;
+	}
 }
 
-.menu_slider .slick-list .slick-track {
-	display: flex;
+.menu_slider .owl-carousel.owl-loaded {
+	display: block;
+}
+
+.owl-carousel {
+	width: 100%;
+	z-index: 1;
+}
+
+.owl-carousel,
+.owl-carousel .owl-item {
+	-webkit-tap-highlight-color: transparent;
 	position: relative;
-	max-width: 1300px;
 }
 
-.menu_slider .slick-list  .slick-track .menu__slider_item {
+.owl-carousel .owl-stage-outer {
+	position: relative;
+	overflow: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+}
+
+.owl-carousel .owl-stage {
+	position: relative;
+	touch-action: manipulation;
+}
+
+.owl-carousel.owl-drag .owl-item {
+	touch-action: pan-y;
+	user-select: none;
+}
+
+.owl-carousel .owl-item {
+	min-height: 1px;
 	float: left;
-	margin-right: 20px;
+	-webkit-backface-visibility: hidden;
 }
 
-.menu_slider .slick-list  .slick-track .menu__slider_item a img {
-	display: block;
-    width: 100%;
+.owl-carousel .owl-item,
+.owl-carousel .owl-wrapper {
+	-webkit-transform: translate3d(0, 0, 0);
 }
 
-
-
-/* .preview_slider .slick-dots {
-	display: block;
-	padding: 0 100px;
-	margin-top: 30px;
-	display: flex;
-	justify-content: space-between;
-} */
-
-@media (max-width: 1226px) {
-	.preview_slider .slick-dots {
-		padding: 0 65px;
-	}
-}
-
-@media (max-width: 992px) {
-	.preview_slider .slick-dots {
-		justify-content: center;
-		margin-top: 15px;
-	}
-
-	.preview_slider .slick-dots li {
-		display: none;
-	}
-
-	.preview_slider .slick-dots li.slick-active {
-		display: block;
-	}
-}
-
-.preview_slider .slick-dots li {
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 23px;
-	opacity: 0.5;
-	color: #FFFFFF;
-}
-
-.preview_slider .slick-dots li:hover {
-	cursor: pointer;
-}
-
-@media (max-width: 992px) {
-	.preview_slider .slick-dots li {
-		font-size: 18px;
-	}
-}
-
-.preview_slider .slick-dots li.slick-active {
-	font-weight: 700;
-	opacity: 1;
-}
-
-.preview__slider_item img {
+.owl-carousel .owl-item img {
 	display: block;
 	width: 100%;
 }
 
-.wrapper .new_dots {
+.owl-nav {
 	display: none;
+	margin: 42px auto 0;
+	justify-content: space-between;
+	width: 180px;
+	height: 65px;
 }
 
-@media (max-width: 992px) {
-	.wrapper .new_dots {
-		display: block;
-		position: relative;
-		bottom: 65px;
+.owl-nav button {
+	width: 65px;
+	height: 65px;
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 2px solid #165659;
+	border-radius: 8px;
+	transition: 0.5s;
+}
+
+.owl-nav button:hover {
+	cursor: pointer;
+	background-color: #165659;
+}
+
+.owl-nav .owl-prev {
+	background-image: url(assets/icons/arrow-left.svg);
+}
+
+.owl-nav .owl-next {
+	background-image: url(assets/icons/arrow-right.svg);
+}
+
+@media (max-width: 1299px) {
+	.owl-nav {
+		display: flex;
 	}
 }
 
-.wrapper .new_dots .slick-dots {
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 120px;
-	height: 12px;
+@media (max-width: 990px) {
+	.owl-nav {
+		display: none;
+	}
 }
 
-.wrapper .new_dots .slick-dots li {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.wrapper .new_dots .slick-dots li button:hover {
-	cursor: pointer;
-}
-
-.wrapper .new_dots .slick-dots li.slick-active button {
-	width: 12px;
-	height: 12px;
-	opacity: 1;
-}
-
-.wrapper .new_dots .slick-dots li button {
-	font-size: 0;
-	width: 10px;
-	height: 10px;
-	background-color: #FFFFFF;
-	border: 0;
-	opacity: 0.6;
-	border-radius: 50%;
+.owl-dots {
+	display: none;
 }
 
 /*----------------MENU----------------*/
@@ -961,7 +931,7 @@ img {
 
 @media (max-width: 992px) {
 	.menu_title {
-		margin: 0 auto;
+		margin: 0 auto 44px;
 		width: 300px;
 		font-size: 50px;
 		line-height: 1.15;
@@ -984,7 +954,6 @@ img {
 @media (max-width: 375px) {
 	.menu_title {
 		width: 268px;
-		margin: 0 auto;
 		font-size: 30px;
 		line-height: 1.15;
 		text-align: center;
