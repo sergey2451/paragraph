@@ -15,14 +15,19 @@ function toggleClassOpen() {
 function removeClassOpen(event) {
 	if (event.target.classList.contains('nav_link')) {
 		navAside.classList.remove('open');
+		line1.classList.remove('transform_line');
+		line2.classList.remove('transform_line');
 	}
 
 	if (event.target.classList.contains('nav_btn')) {
 		navAside.classList.remove('open');
+		line1.classList.remove('transform_line');
+		line2.classList.remove('transform_line');
 	}
-
 	if (event.target.classList.contains('overlay')) {
 		navAside.classList.remove('open');
+		line1.classList.remove('transform_line');
+		line2.classList.remove('transform_line');
 	}
 }
 
@@ -205,7 +210,7 @@ function toggleClassOpenDropdown(event) {
 		dropdown.classList.remove('open_dropdown');
 	}
 
-	if (event.target.classList.contains('dropdown_location')
+	if (event.target.classList.contains('location')
 	|| event.target.classList.contains('dropdown__location_btn')
 	|| event.target.classList.contains('dropdown__location_text')
 	|| event.target.classList.contains('location_arrow')) {
@@ -216,3 +221,35 @@ function toggleClassOpenDropdown(event) {
 }
 
 document.addEventListener('click', toggleClassOpenDropdown);
+
+
+const addressBtn = document.querySelector('#address');
+const mapBtn = document.querySelector('#map');
+const coffeeHousesPhotos = document.querySelector('#coffee__houses_photos');
+const locationMap = document.querySelector('#location_map');
+
+function addClassActiveBtn(event) {
+	if (!event.target.classList.contains('active_btn') && event.target.classList.contains('map')) {
+		mapBtn.classList.add('active_btn');
+		addressBtn.classList.remove('active_btn');
+		coffeeHousesPhotos.classList.remove('grid');
+		coffeeHousesPhotos.classList.add('none');
+		locationMap.classList.add('block');
+	} else if (!event.target.classList.contains('active_btn') && event.target.classList.contains('address')) {
+		addressBtn.classList.add('active_btn');
+		mapBtn.classList.remove('active_btn');
+		coffeeHousesPhotos.classList.add('grid');
+		coffeeHousesPhotos.classList.remove('none');
+		locationMap.classList.remove('block');
+	}
+}
+
+addressBtn.addEventListener('click', addClassActiveBtn);
+mapBtn.addEventListener('click', addClassActiveBtn);
+
+
+document.querySelectorAll('.preview__slider_item').forEach(item => item.onmousedown = e => e.target.style.cursor = 'grab');
+document.querySelectorAll('.preview__slider_item').forEach(item => item.onmouseup = e => e.target.style.cursor = 'default');
+
+document.querySelectorAll('.confectionery__slider_item').forEach(item => item.onmousedown = e => e.target.style.cursor = 'grab');
+document.querySelectorAll('.confectionery__slider_item').forEach(item => item.onmouseup = e => e.target.style.cursor = 'default');
