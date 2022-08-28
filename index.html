@@ -6,8 +6,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Сеть кофеен Paragraph - Минск, Брест, Пинск, Кобрин</title>
-	<!-- <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css"> -->
 	<link rel="stylesheet" href="style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +26,7 @@
 			<li class="nav_item"><a href="#footer" class="nav_link">Контакты</a></li>
 			<li class="nav_item"><a href="" class="nav_link guest_card">Карта гостя</a></li>
 		</ul>
-		<ul class="footer_social nav_social">
+		<ul class="nav_social">
 			<li class="footer__social_item"><a href="#" class="tripadviser_link"></a></li>
 			<li class="footer__social_item"><a href="#" class="inst_link"></a></li>
 			<li class="footer__social_item"><a href="#" class="vk_link"></a></li>
@@ -39,15 +37,26 @@
 	<div class="overlay" id="overlay">
 		<header class="header">
 			<div class="header_wrapper">
-				<div class="dropdown">
-					<p class="dropdown_text">Брест</p>
-					<div class="header_arrow"></div>
+				<div id="dropdown" class="dropdown">
+					<button id="dropdown_btn" class="dropdown_btn">
+						<span class="dropdown_text">Брест</span>
+						<div class="header_arrow"></div>
+					</button>
+					<ul class="dropdown_items">
+						<li class="dropdown_item"><a href="#" class="dropdown__item_city">Минск</a></li>
+						<li class="dropdown_item active_item"><a href="#" class="dropdown__item_city">Брест</a></li>
+						<li class="dropdown_item"><a href="#" class="dropdown__item_city">Пинск</a></li>
+						<li class="dropdown_item"><a href="#" class="dropdown__item_city">Кобрин</a></li>
+					</ul>
 				</div>
 				<a href="#" class="logo_link">
 					<div class="logo"></div>
 				</a>
 				<div class="burger_container">
-					<div class="burger" id="burger"></div>
+					<div id="burger" class="hamburger">
+						<span id="line1" class="line line1"></span>
+						<span id="line2" class="line line2"></span>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -98,9 +107,19 @@
 			<section class="coffee_houses" id="coffee_houses">
 				<div class="wrapper coffee__houses_wrapper">
 					<h2 class="coffee__houses_title">Кофейни</h2>
-					<div class="coffee__houses_dropdown">
-						<p class="coffee__houses_dropdown-text">Брест</p>
-						<div class="arrow"></div>
+					<div class="dropdown_location">
+						<div id="dropdown_location" class="dropdown location">
+							<button id="dropdown__location_btn" class="dropdown__location_btn">
+								<span class="dropdown__location_text">Брест</span>
+								<div class="location_arrow"></div>
+							</button>
+							<ul class="dropdown_items">
+								<li class="dropdown_item"><a href="#" class="dropdown__item_city">Минск</a></li>
+								<li class="dropdown_item active_item"><a href="#" class="dropdown__item_city">Брест</a></li>
+								<li class="dropdown_item"><a href="#" class="dropdown__item_city">Пинск</a></li>
+								<li class="dropdown_item"><a href="#" class="dropdown__item_city">Кобрин</a></li>
+							</ul>
+						</div>
 					</div>
 					<div class="coffee__houses_buttons">
 						<button class="coffee__houses_btn active_btn">Наши адреса</button>

@@ -2,10 +2,14 @@ const burgerButton = document.querySelector('#burger');
 const navAside = document.querySelector('#nav');
 const navButton = document.querySelector('#nav_btn');
 const overlay = document.querySelector('#overlay');
+const line1 = document.querySelector('#line1');
+const line2 = document.querySelector('#line2');
 
 
-function addClassOpen() {
-	navAside.classList.add('open');
+function toggleClassOpen() {
+	navAside.classList.toggle('open'); 
+	line1.classList.toggle('transform_line');
+	line2.classList.toggle('transform_line');
 }
 
 function removeClassOpen(event) {
@@ -23,7 +27,7 @@ function removeClassOpen(event) {
 }
 
 
-burgerButton.addEventListener('click', addClassOpen);
+burgerButton.addEventListener('click', toggleClassOpen);
 navAside.addEventListener('click', removeClassOpen);
 overlay.addEventListener('click', removeClassOpen);
 
@@ -120,6 +124,12 @@ const foodItem = document.querySelector('#food_li');
 const coffeeItem = document.querySelector('#coffee_li');
 const cakesItem = document.querySelector('#cakes_li');
 const foodItems = document.querySelectorAll('.food_item');
+const drinksTab = document.querySelector('#drinks-tab');
+const dessertsTab = document.querySelector('#desserts-tab');
+const foodTab = document.querySelector('#food-tab');
+const coffeeTab = document.querySelector('#coffee-tab');
+const cakesTab = document.querySelector('#cakes-tab');
+const menuTabs = document.querySelectorAll('.menu_tab');
 
 function addClassOpenActive(event) {
 	for(let i = 0; i < foodItems.length; i++) {
@@ -127,9 +137,6 @@ function addClassOpenActive(event) {
 			foodItems[i].classList.remove('food__item_active');
 		}
 	}
-
-
-
 	
 	event.target.classList.add('food__item_active');
 
@@ -139,7 +146,7 @@ function addClassOpenActive(event) {
 				menuTabs[i].classList.remove('grid');
 			}
 		}
-		
+
 		drinksTab.classList.add('grid');
 	} else if (dessertsItem.classList.contains('food__item_active')) {
 		for (let i = 0; i < menuTabs.length; i++) {
@@ -183,9 +190,29 @@ coffeeItem.addEventListener('click', addClassOpenActive);
 cakesItem.addEventListener('click', addClassOpenActive);
 
 
-const drinksTab = document.querySelector('#drinks-tab');
-const dessertsTab = document.querySelector('#desserts-tab');
-const foodTab = document.querySelector('#food-tab');
-const coffeeTab = document.querySelector('#coffee-tab');
-const cakesTab = document.querySelector('#cakes-tab');
-const menuTabs = document.querySelectorAll('.menu_tab');
+const dropdown = document.querySelector('#dropdown');
+const dropdownBtn = document.querySelector('#dropdown_btn');
+const dropdownLocation = document.querySelector('#dropdown_location');
+const dropdownLocationBtn = document.querySelector('#dropdown__location_btn');
+
+function toggleClassOpenDropdown(event) {
+	if (event.target.classList.contains('dropdown')
+	|| event.target.classList.contains('dropdown_btn')
+	|| event.target.classList.contains('dropdown_text')
+	|| event.target.classList.contains('header_arrow')) {
+		dropdown.classList.toggle('open_dropdown');
+	} else {
+		dropdown.classList.remove('open_dropdown');
+	}
+
+	if (event.target.classList.contains('dropdown_location')
+	|| event.target.classList.contains('dropdown__location_btn')
+	|| event.target.classList.contains('dropdown__location_text')
+	|| event.target.classList.contains('location_arrow')) {
+		dropdownLocation.classList.toggle('open_dropdown');
+	} else {
+		dropdownLocation.classList.remove('open_dropdown');
+	}
+}
+
+document.addEventListener('click', toggleClassOpenDropdown);
