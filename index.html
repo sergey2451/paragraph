@@ -623,8 +623,160 @@
 								<a href="#" class="mobile__app_icons_link"><img src="assets/icons/App Store.svg" alt="app-store"></a>
 							</div>
 							<button class="mobile__app_btn">Программа лояльности</button>
+							<button id="guest_profile_btn" class="mobile__app_btn">Анкета гостя</button>
+							<button id="programm_btn" class="mobile__app_btn">Условия программы</button>
 						</div>
 						<div class="mobile__app_img"></div>
+					</div>
+				</div>
+				<div id="guest__profile_wrapper" class="guest__profile_wrapper">
+					<div class="guest__profile_content">
+						<button id="guest__profile_close_btn" class="guest__profile_close_btn"></button>
+						<p class="guest__profile_title">Анкета гостя</p>
+						<form action="" class="guest__profile_form">
+							<div class="guest__profile_form_content">
+								<p class="guest__profile_subtitle">Заполните все поля и станьте обладателем карты постоянного гостя</p>
+								<input type="text" id="name" name="name" placeholder="Имя" required>
+								<input type="text" id="surname" name="surname" placeholder="Фамилия" required>
+								<div class="guest__profile_form_checkbox">
+									<input class="radio_btn" type="radio" id="male" name="gender" value="male" checked>
+									<label for="male">Мужской</label>
+									<input class="radio_btn" type="radio" id="female" name="gender" value="female">
+									<label for="female">Женский</label>
+								</div>
+								<p class="guest__profile_birthday_text">День рождения</p>
+								<div class="guest__profile_form_birthday">
+									<select class="bday" id="birth_day" name="birth_day" required>
+										<option class="bday_disabled" value="День" hidden disabled selected>День</option>
+										<option value="1">01</option>
+										<option value="2">02</option>
+										<option value="3">03</option>
+										<option value="4">04</option>
+										<option value="5">05</option>
+										<option value="6">06</option>
+										<option value="7">07</option>
+										<option value="8">08</option>
+										<option value="9">09</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
+										<option value="24">24</option>
+										<option value="25">25</option>
+										<option value="26">26</option>
+										<option value="27">27</option>
+										<option value="28">28</option>
+										<option value="29">29</option>
+										<option value="30">30</option>
+										<option value="31">31</option>
+									 </select>
+									 <select class="bday" id="birth_month" name="birth_month" required>
+										<option value="Месяц" hidden disabled selected>Месяц</option>
+										<option value="1">01</option>
+										<option value="2">02</option>
+										<option value="3">03</option>
+										<option value="4">04</option>
+										<option value="5">05</option>
+										<option value="6">06</option>
+										<option value="7">07</option>
+										<option value="8">08</option>
+										<option value="9">09</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+									 </select>
+									 <select class="bday" id="birth_year" name="birth_year" required>
+										<option value="Год" hidden disabled selected>Год</option>
+										<option value="2004">2004</option>
+										<option value="2003">2003</option>
+										<option value="2002">2002</option>
+										<option value="2001">2001</option>
+										<option value="2000">2000</option>
+										<option value="1999">1999</option>
+										<option value="1998">1998</option>
+										<option value="1997">1997</option>
+										<option value="1996">1996</option>
+										<option value="1995">1995</option>
+										<option value="1994">1994</option>
+									 </select>
+								</div>
+								<input type="tel" id="phone" name="phone" placeholder="Номер телефона" required>
+								<input type="email" id="email" placeholder="Email" required>
+								<p class="select__coffee_houses_text">Выберите кофейню, в которой вы приобрели карту:</p>
+								<select id="coffee__houses_address" name="coffee__houses_address">
+									<option value="kalvaryiskaya5">Минск, Кальварийская, 5</option>
+									<option value="nezavisimosti37">Минск, пр-т Независимости, 37</option>
+									<option value="sovetskaya30">Брест, Советская, 30</option>
+									<option value="sovetskaya66">Брест, Советская, 66</option>
+									<option value="karbysheva32" selected>Брест, Карбышева, 32</option>
+									<option value="naberezhnaya2">Брест, набережная Ф.Скорины, 2</option>
+									<option value="orlovskaya10">Брест, Орловская, 10</option>
+									<option value="lenina2">Пинск, Ленина, 2</option>
+								</select>
+								<input class="checkbox_btn" type="checkbox" id="permission" name="permission" value="permission">
+								<label for="permission">Я разрешаю ООО «ПараграфБрест» использовать указанные мной данные в маркетинговых целях.</label>
+								<p class="guest__profile_form_footer_text">Необходимо согласиться с условиями</p>
+							</div>
+							<input class="submit" type="submit" value="Отправить">
+						</form>
+					</div>
+				</div>
+				<div id="programm_wrapper" class="programm_wrapper">
+					<div class="programm_content">
+						<button id="programm_close_btn" class="programm_close_btn"></button>
+						<p class="programm_title">Условия программы</p>
+						<div class="programm_main">
+							<div class="first_div">
+								<p style="font-weight: 600;" class="first_p">Карта гостя действует во всех кофейнях сети Paragraph Coffee.</p>
+								<p class="second_p">Все суммы покупок будут зачисляться на накопительный счет владельца карты.</p>
+								<p class="third_p"><span class="programm__bold_text">Размер кэшбэка зависит от общей суммы покупок</span> за весь период пользования Картой гостя, сделанных Вами с предъявлением данной карты в сети кофеен Paragraph Coffee, а также партнеров, и <span class="programm__bold_text">начисляется следующим образом:</span></p>
+							</div>
+							<div class="programm__main_table">
+								<table>
+									<thead>
+										<th>Накопление</th>
+										<th>cashback</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td>до 99,99 б.р.</td>
+											<td>3%</td>
+										</tr>
+										<tr>
+											<td>100 - 299,99 б.р</td>
+											<td>5%</td>
+										</tr>
+										<tr>
+											<td>300 - 499,99 б.р.</td>
+											<td>7%</td>
+										</tr>
+										<tr>
+											<td>от 500 б.р.</td>
+											<td>10%</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="second_div">
+								<p class="second__div_p">Соответствующий <span class="programm__bold_text">процент от суммы заносится на бонусный счёт</span> владельца карты сразу же после совершения покупки.</p>
+								<p class="second__div_p"><span class="programm__bold_text">Баланс накопительного счета</span> можно узнать на личной странице сайта <a style="color: inherit;font-weight: 600;" href="#">paragraph.by</a> и у сотрудников кофеен.</p>
+								<p class="second__div_p"><span class="programm__bold_text">Участник программы вправе передавать Карту гостя</span> друзьям и близким, ведь так будет гораздо проще накопить большую сумму на счете.</p>
+								<p class="second__div_p"><span class="programm__bold_text">В случае потери или порчи карты</span> Вы можете обратиться к сотрудникам любой кофейни сети Paragraph Coffee с просьбой о её восстановлении.</p>
+								<p style="font-weight: 600;" class="second__div_p">Стоимость восстановления карты — 3 б.р.</p>
+							</div>
+							<p class="programm__footer_text">ООО «ПараграфБрест» оставляет за собой право в дальнейшем изменять условия программы.</p>
+						</div>
+						<button id="programm__footer_btn" class="programm__footer_btn">Спасибо</button>
 					</div>
 				</div>
 			</section>

@@ -253,3 +253,37 @@ document.querySelectorAll('.preview__slider_item').forEach(item => item.onmouseu
 
 document.querySelectorAll('.confectionery__slider_item').forEach(item => item.onmousedown = e => e.target.style.cursor = 'grab');
 document.querySelectorAll('.confectionery__slider_item').forEach(item => item.onmouseup = e => e.target.style.cursor = 'default');
+
+
+const guestProfileBtn = document.querySelector('#guest_profile_btn');
+const guestProfileWrapper = document.querySelector('#guest__profile_wrapper');
+const guestProfileCloseBtn = document.querySelector('#guest__profile_close_btn');
+
+function showGuestProfile() {
+	guestProfileWrapper.classList.add('show');
+}
+
+function hideGuestProfile() {
+	guestProfileWrapper.classList.remove('show');
+}
+
+guestProfileBtn.addEventListener('click', showGuestProfile);
+guestProfileCloseBtn.addEventListener('click', hideGuestProfile);
+
+
+const programmBtn = document.querySelector('#programm_btn');
+const programmWrapper = document.querySelector('#programm_wrapper');
+const programmCloseBtn = document.querySelector('#programm_close_btn');
+const programmFooterBtn = document.querySelector('#programm__footer_btn');
+
+function showProgramm() {
+	programmWrapper.classList.add('show');
+}
+
+function hideProgramm() {
+	programmWrapper.classList.remove('show');
+}
+
+programmBtn.addEventListener('click', showProgramm);
+programmCloseBtn.addEventListener('click', hideProgramm);
+programmFooterBtn.addEventListener('click', hideProgramm);
