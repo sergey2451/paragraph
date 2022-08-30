@@ -118,7 +118,7 @@ a {
 }
 
 @media (max-width: 576px) {
-	.header {
+	.nav.open~.overlay .header {
 		z-index: 1000;
 		box-shadow: none;
 	}
@@ -127,7 +127,6 @@ a {
 @media (max-width: 375px) {
 	.header {
 		max-width: 375px;
-		box-shadow: none;
 	}
 }
 
@@ -162,6 +161,44 @@ a {
 
 @media (max-width: 375px) {
 	.header_wrapper {
+		margin: 0;
+		padding: 0 16px;
+		height: 50px;
+		max-width: 375px;
+	}
+}
+
+.private__cabinet_header_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 0 70px;
+	height: 90px;
+	max-width: 1366px;
+}
+
+@media (max-width: 1200px) {
+	.private__cabinet_header_wrapper {
+		max-width: 100%;
+		padding: 0 30px;
+	}
+}
+
+@media (max-width: 768px) {
+	.private__cabinet_header_wrapper {
+		padding: 0 16px;
+	}
+}
+
+@media (max-width: 576px) {
+	.private__cabinet_header_wrapper {
+		height: 50px;
+	}
+}
+
+@media (max-width: 375px) {
+	.private__cabinet_header_wrapper {
 		margin: 0;
 		padding: 0 16px;
 		height: 50px;
@@ -467,6 +504,24 @@ a {
 
 @media (max-width: 576px) {
 	.burger_container {
+		width: 56.5px;
+	}
+}
+
+.private__cabinet_burger_container {
+	width: 223px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+	.private__cabinet_burger_container {
+		width: 80px;
+	}
+}
+
+@media (max-width: 576px) {
+	.private__cabinet_burger_container {
 		width: 56.5px;
 	}
 }
@@ -2588,10 +2643,6 @@ input, select {
 	background: #165659;
 }
 
-#coffee__houses_address option {
-
-}
-
 #coffee__houses_address:focus {
 	border: 1px solid #118181;
 }
@@ -2831,14 +2882,8 @@ input, select {
 	}
 }
 
-.first_p {
-}
 .second_p {
 	margin: 7px 0 7px;
-}
-.third_p {
-}
-.programm__main_table {
 }
 
 .second_div {
@@ -2850,7 +2895,6 @@ input, select {
 
 .second__div_p {
 	text-indent: 10px;
-	/* padding-left: 10px; */
 	position: relative;
 }
 
@@ -3271,6 +3315,23 @@ input, select {
 
 /*----------------PRIVATE_CABINET----------------*/
 
+.private__cabinet_greeting_container {
+	width: 223px;
+	height: 28px;
+}
+
+@media (max-width: 768px) {
+	.private__cabinet_greeting_container {
+		width: 80px;
+	}
+}
+
+@media (max-width: 576px) {
+	.private__cabinet_greeting_container {
+		width: 56.5px;
+	}
+}
+
 .private__cabinet_greeting {
 	font-weight: 400;
 	font-size: 18px;
@@ -3279,15 +3340,53 @@ input, select {
 	color: #FFFFFF;
 }
 
+@media (max-width: 768px) {
+	.private__cabinet_greeting {
+		display: none;
+	}
+}
+
 .private__cabinet_content {
 	padding-top: 90px;
 	background-color: #0F3739;
+}
+
+@media (max-width: 576px) {
+	.private__cabinet_content {
+		padding-top: 50px;
+	}
 }
 
 .private__cabinet_wrapper {
 	background-color: #0F3739;
 	max-width: 1226px;
 	margin: 0 auto;
+}
+
+@media (max-width: 1366px) {
+	.private__cabinet_wrapper {
+		max-width: 100%;
+		margin: 0 70px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.private__cabinet_wrapper {
+		margin: 0 30px;
+	}
+}
+
+@media (max-width: 768px) {
+	.private__cabinet_wrapper {
+		margin: 0 16px;
+	}
+}
+
+@media (max-width: 375px) {
+	.private__cabinet_wrapper {
+		max-width: 375px;
+		margin: 0 8px;
+	}
 }
 
 .private__cabinet_first_div {
@@ -3299,6 +3398,19 @@ input, select {
 	margin: 52px 0 70px;
 }
 
+@media (max-width: 1267px) {
+	.private__cabinet_first_div {
+		height: auto;
+		align-items: center;
+	}
+}
+
+@media (max-width: 768px) {
+	.private__cabinet_first_div {
+		margin: 27px 0 40px;
+	}
+}
+
 .private__cabinet_title {
 	font-weight: 800;
 	font-size: 65px;
@@ -3307,17 +3419,45 @@ input, select {
 	text-transform: uppercase;
 	color: transparent;
 	-webkit-text-stroke: 2px #FFFFFF;
-	flex: 1;
-	width: 883px;
-	margin-top: -12px
+	margin-top: -12px;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.private__cabinet_title {
+		margin-top: 0;
+		font-size: 38px;
+		line-height: 120%;
+		-webkit-text-stroke: 1px #FFFFFF;
+	}
 }
 
 .account_money {
 	background: #0D4749;
 	border-radius: 12px;
-	max-width: 343px;
+	width: 343px;
 	min-height: 156px;
-	padding: 18px 105px 22px 28px;
+	padding: 18px 28px 22px;
+	margin-left: auto;
+}
+
+@media (max-width: 1267px) {
+	.account_money {
+		margin-left: 0;
+		margin: 50px 0 50px;
+	}
+}
+
+@media (max-width: 768px) {
+	.account_money {
+		margin: 16px 0 10px;
+	}
+}
+
+@media (max-width: 375px) {
+	.account_money {
+		width: 100%;
+	}
 }
 
 .account__money_text {
@@ -3352,6 +3492,26 @@ input, select {
 	justify-content: space-between;
 }
 
+@media (max-width: 1267px) {
+	.private__cabinet_btn_wrapper {
+		order: 3;
+	}
+}
+
+@media (max-width: 480px) {
+	.private__cabinet_btn_wrapper {
+		width: 343px;
+	}
+}
+
+@media (max-width: 375px) {
+	.private__cabinet_btn_wrapper {
+		width: 100%;
+		flex-direction: column;
+		row-gap: 10px;
+	}
+}
+
 .private__cabinet_btn {
 	font-family: 'Raleway';
 	font-style: normal;
@@ -3361,7 +3521,7 @@ input, select {
 	text-align: center;
 	letter-spacing: 0.02em;
 	color: #FFFFFF;
-	min-width: 200px;
+	width: 200px;
 	height: 50px;
 	background-color: transparent;
 	border: 2px solid #165659;
@@ -3370,10 +3530,14 @@ input, select {
 	transition: 0.5s;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
 	.private__cabinet_btn {
-		font-size: 16px;
-		line-height: 28px;
+		width: 166px;
+	}
+}
+
+@media (max-width: 375px) {
+	.private__cabinet_btn {
 		width: 100%;
 	}
 }
@@ -3414,17 +3578,31 @@ input, select {
 	width: 51.7%;
 }
 
+@media (max-width: 992px) {
+	.buy {
+		width: 61.7%;
+	}
+}
+
 .bonuses {
 	width: 25.7%;
+}
+
+@media (max-width: 992px) {
+	.bonuses {
+		width: 15.7%;
+	}
+}
+
+@media (max-width: 768px) {
+	.buy_column {
+		display: none;
+	}
 }
 
 .private__cabinet_thead tr th {
 	font-family: 'Raleway';
 	font-style: normal;
-}
-
-.private__cabinet_tbody {
-
 }
 
 .private__cabinet_tbody tr {
@@ -3440,50 +3618,14 @@ input, select {
 	height: 48px;
 }
 
-
 .private__cabinet__btn_wrapper {
 	width: 380px;
 	padding-bottom: 62px;
 	margin: 50px auto 0;
 }
 
-.rectangle_btn {
-
-}
-
-.private__cabinet_btn {
-
-}
-
-
-/* .wrapper {
-	background-color: #0F3739;
-	max-width: 1226px;
-	margin: 0 auto;
-}
-
-@media (max-width: 1366px) {
-	.wrapper {
-		max-width: 100%;
-		margin: 0 70px;
+@media (max-width: 425px) {
+	.private__cabinet__btn_wrapper {
+		width: 100%;
 	}
 }
-
-@media (max-width: 1200px) {
-	.wrapper {
-		max-width: 100%;
-		margin: 0 30px;
-	}
-}
-
-@media (max-width: 992px) {
-	.wrapper {
-		margin: 0;
-	}
-}
-
-@media (max-width: 375px) {
-	.wrapper {
-		max-width: 375px;
-	}
-} */
