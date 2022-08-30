@@ -291,3 +291,19 @@ function hideProgramm() {
 programmBtn.addEventListener('click', showProgramm);
 programmCloseBtn.addEventListener('click', hideProgramm);
 programmFooterBtn.addEventListener('click', hideProgramm);
+
+
+const selectedAddress = document.querySelector('#selected_address');
+const addressOptionsContainer = document.querySelector('#address__options_container');
+const addressOptionsList = document.querySelectorAll('.address_option');
+
+selectedAddress.addEventListener('click', () => {
+	addressOptionsContainer.classList.toggle('active');
+});
+
+addressOptionsList.forEach( o => {
+	o.addEventListener('click', () => {
+		selectedAddress.innerHTML = o.querySelector('label').innerHTML;
+		addressOptionsContainer.classList.remove('active');
+	})
+})

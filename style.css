@@ -1,36 +1,36 @@
-@font-face{
+@font-face {
 	font-family: "Raleway";
 	src: url("assets/fonts/Raleway-Regular.ttf") format("truetype");
-	font-style: normal; 
-	font-weight: normal; 
+	font-style: normal;
+	font-weight: normal;
 }
 
-@font-face{
+@font-face {
 	font-family: "Raleway";
 	src: url("assets/fonts/Raleway-SemiBold.ttf") format("truetype");
-	font-style: normal; 
-	font-weight: 600; 
+	font-style: normal;
+	font-weight: 600;
 }
 
-@font-face{
+@font-face {
 	font-family: "Raleway";
 	src: url("assets/fonts/Raleway-Bold.ttf") format("truetype");
-	font-style: normal; 
-	font-weight: 700; 
+	font-style: normal;
+	font-weight: 700;
 }
 
-@font-face{
+@font-face {
 	font-family: "Raleway";
 	src: url("assets/fonts/Raleway-Medium.ttf") format("truetype");
-	font-style: normal; 
-	font-weight: 500; 
+	font-style: normal;
+	font-weight: 500;
 }
 
-@font-face{
+@font-face {
 	font-family: "Raleway";
 	src: url("assets/fonts/Raleway-ExtraBold.ttf") format("truetype");
-	font-style: normal; 
-	font-weight: 800; 
+	font-style: normal;
+	font-weight: 800;
 }
 
 * {
@@ -1089,7 +1089,7 @@ img {
 }
 
 iframe {
-  filter: grayscale(100%);
+	filter: grayscale(100%);
 }
 
 .location__map_box {
@@ -2259,13 +2259,15 @@ iframe {
 
 /*----------------GUEST_PROFILE----------------*/
 
-input, select {
+input,
+select {
 	font-family: 'Raleway', sans-serif;
 	font-style: normal;
 }
 
 .guest__profile_wrapper {
-	display: none;
+	/* display: none; */
+	display: block;
 	align-items: center;
 	justify-content: center;
 	z-index: 2000;
@@ -2275,7 +2277,7 @@ input, select {
 	height: 100%;
 	width: 100%;
 	overflow: auto;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0, 0, 0, 0.4);
 	padding: 50px 0 50px;
 }
 
@@ -2440,27 +2442,27 @@ input, select {
 }
 
 .radio_btn {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
 }
 
 .radio_btn+label {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
 }
 
 .radio_btn+label::before {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    flex-grow: 0;
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
+	flex-grow: 0;
 	border: 2px solid #118181;
 	border-radius: 12px;
-    margin-right: 9px;
+	margin-right: 9px;
 	box-sizing: border-box;
 }
 
@@ -2470,7 +2472,7 @@ input, select {
 
 .radio_btn:checked+label::before {
 	background: #118181;
-    background-image: url(assets/icons/ellipse.svg);
+	background-image: url(assets/icons/ellipse.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -2621,47 +2623,125 @@ input, select {
 	color: #FFFFFF;
 }
 
-#coffee__houses_address {
-	appearance: none;
-	background: url(assets/icons/arrow-for-select.svg) no-repeat right center;
+.select__box_address {
+	display: flex;
+	flex-direction: column;
 	width: 100%;
-	height: 50px;
+}
+
+.select__box_address .address__options_container {
 	background: #0D4749;
-	border: 1px solid #0D4749;
+	box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25);
 	border-radius: 8px;
-	margin: 16px 0 33px;
-	padding-left: 20px;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 21px;
 	letter-spacing: 0.02em;
 	color: #FFFFFF;
-	outline: none;
+	max-height: 0;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.4s;
+	overflow: hidden;
+	order: 1;
 }
 
-#coffee__houses_address option:checked {
+.selected_address {
+	background: #0D4749;
+	border: 1px solid #0D4749;
+	border-radius: 8px;
+	margin-bottom: 6px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+	position: relative;
+	order: 0;
+}
+
+.selected_address::after {
+	content: "";
+	background: url(assets/icons/arrow-for-select.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	height: 14px;
+	width: 17.5px;
+	right: 16.5px;
+	top: calc(50% - 14px/2);
+	transition: all 0.3s;
+}
+
+.select__box_address .address__options_container.active {
+	max-height: 332px;
+	opacity: 1;
+}
+
+.select__box_address .address__options_container.active+.selected_address::after {
+	transform: rotateX(180deg);
+}
+
+.select__box_address .address_option {
+	padding: 8px 0 7px 20px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.selected_address {
+	padding: 11px 0 12px 20px;
+	cursor: pointer;
+}
+
+.select__box_address .address_option:hover {
 	background: #165659;
 }
 
-#coffee__houses_address:focus {
-	border: 1px solid #118181;
+.select__box_address label {
+	cursor: pointer;
 }
 
-#coffee__houses_address option {
-	height: 20px;
+.select__box_address .address_option .address_radio {
+	display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .checkbox_btn {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
 }
 
 .checkbox_btn+label {
 	display: inline-flex;
-    align-items: flex-start;
+	align-items: flex-start;
 	column-gap: 9px;
-    user-select: none;
+	user-select: none;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 153.88%;
@@ -2676,12 +2756,12 @@ input, select {
 }
 
 .checkbox_btn+label::before {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    flex-grow: 0;
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
+	flex-grow: 0;
 	border: 1px solid #118181;
 	border-radius: 4px;
 	box-sizing: border-box;
@@ -2693,7 +2773,7 @@ input, select {
 
 .checkbox_btn:checked+label::before {
 	background: #118181;
-    background-image: url(assets/icons/check.svg);
+	background-image: url(assets/icons/check.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -2746,7 +2826,7 @@ input, select {
 	height: 100%;
 	width: 100%;
 	overflow: auto;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0, 0, 0, 0.4);
 	padding: 50px 0 50px;
 }
 

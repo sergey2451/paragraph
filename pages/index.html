@@ -187,7 +187,10 @@
 					</div>
 					<div id="location_map" class="location_map">
 						<div class="location__map_box">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78449.31346380223!2d23.632848584036516!3d52.08808417698979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210c0223630975%3A0x4d319ea41f64ae99!2z0JHRgNC10YHRgg!5e0!3m2!1sru!2sby!4v1661716655799!5m2!1sru!2sby" width="100%" height="630px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78449.31346380223!2d23.632848584036516!3d52.08808417698979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210c0223630975%3A0x4d319ea41f64ae99!2z0JHRgNC10YHRgg!5e0!3m2!1sru!2sby!4v1661716655799!5m2!1sru!2sby"
+								width="100%" height="630px" style="border:0;" allowfullscreen="" loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 					</div>
 				</div>
@@ -298,7 +301,8 @@
 							</a>
 							<a href="#" class="food__images_link">
 								<div class="food_figure">
-									<img class="figure_img" src="../assets/images/desserts/dessert-2.png" alt="Макаронс 'Солёная карамель'">
+									<img class="figure_img" src="../assets/images/desserts/dessert-2.png"
+										alt="Макаронс 'Солёная карамель'">
 									<figcaption class="food_figcaption">
 										<p class="figcaption_text">Макаронс &#171Солёная карамель&#187</p>
 									</figcaption>
@@ -314,7 +318,8 @@
 							</a>
 							<a href="#" class="food__images_link">
 								<div class="food_figure">
-									<img class="figure_img" src="../assets/images/desserts/dessert-4.png" alt="Печенье 'Ореховое с вишней'">
+									<img class="figure_img" src="../assets/images/desserts/dessert-4.png"
+										alt="Печенье 'Ореховое с вишней'">
 									<figcaption class="food_figcaption">
 										<p class="figcaption_text">Печенье &#171Ореховое с вишней&#187</p>
 									</figcaption>
@@ -596,7 +601,8 @@
 							продолжать радовать вас новыми вкусами.</p>
 					</div>
 					<div class="confectionery_order">
-						<p class="confectionery__order_text">Всю продукцию можно приобрести на <a href="#" class="confectionery__order_link">paragraphcake.by</a></p>
+						<p class="confectionery__order_text">Всю продукцию можно приобрести на <a href="#"
+								class="confectionery__order_link">paragraphcake.by</a></p>
 						<button class="rectangle_btn confectionery__order_btn">Посмотреть и заказать</button>
 					</div>
 				</div>
@@ -676,8 +682,8 @@
 										<option value="29">29</option>
 										<option value="30">30</option>
 										<option value="31">31</option>
-									 </select>
-									 <select class="bday" id="birth_month" name="birth_month" required>
+									</select>
+									<select class="bday" id="birth_month" name="birth_month" required>
 										<option value="Месяц" hidden disabled selected>Месяц</option>
 										<option value="1">Январь</option>
 										<option value="2">Февраль</option>
@@ -691,8 +697,8 @@
 										<option value="10">Октябрь</option>
 										<option value="11">Ноябрь</option>
 										<option value="12">Декабрь</option>
-									 </select>
-									 <select class="bday" id="birth_year" name="birth_year" required>
+									</select>
+									<select class="bday" id="birth_year" name="birth_year" required>
 										<option value="Год" hidden disabled selected>Год</option>
 										<option value="2004">2004</option>
 										<option value="2003">2003</option>
@@ -705,24 +711,52 @@
 										<option value="1996">1996</option>
 										<option value="1995">1995</option>
 										<option value="1994">1994</option>
-									 </select>
+									</select>
 								</div>
 								<input type="date" id="date" name="date" placeholder="Дата" value="Дата" required>
 								<input type="tel" id="phone" name="phone" placeholder="Номер телефона" required>
 								<input type="email" id="email" placeholder="Email" required>
 								<p class="select__coffee_houses_text">Выберите кофейню, в которой вы приобрели карту:</p>
-								<select id="coffee__houses_address" name="coffee__houses_address">
-									<option value="kalvaryiskaya5">Минск, Кальварийская, 5</option>
-									<option value="nezavisimosti37">Минск, пр-т Независимости, 37</option>
-									<option value="sovetskaya30">Брест, Советская, 30</option>
-									<option value="sovetskaya66">Брест, Советская, 66</option>
-									<option value="karbysheva32" selected>Брест, Карбышева, 32</option>
-									<option value="naberezhnaya2">Брест, набережная Ф.Скорины, 2</option>
-									<option value="orlovskaya10">Брест, Орловская, 10</option>
-									<option value="lenina2">Пинск, Ленина, 2</option>
-								</select>
+								<div class="select__box_address">
+									<div id="address__options_container" class="address__options_container">
+										<div class="address_option">
+											<input type="radio" class="address_radio" id="kalvaryiskaya5" name="adress">
+											<label for="kalvaryiskaya5">Минск, Кальварийская, 5</label>
+										</div>
+										<div class="address_option">
+											<input type="radio" class="address_radio" id="nezavisimosti37" name="adress">
+											<label for="nezavisimosti37">Минск, пр-т Независимости, 37</label>
+										</div>
+										<div class="address_option">
+											<input type="radio" class="address_radio" id="sovetskaya30" name="adress">
+											<label for="sovetskaya30">Брест, Советская, 30</label>
+										</div>
+										<div class="address_option">
+											<input type="radio" class="address_radio" id="sovetskaya66" name="adress">
+											<label for="sovetskaya66">Брест, Советская, 66</label>
+										</div>
+										<div class="address_option">
+											<input type="radio" class="address_radio" id="karbysheva32" name="adress">
+											<label for="karbysheva32">Брест, Карбышева, 32</label>
+										</div>
+										<div class="address_option">
+											<input type="radio" class="address_radio" id="naberezhnaya2" name="adress">
+											<label for="naberezhnaya2">Брест, набережная Ф.Скорины, 2</label>
+										</div>
+										<div class="address_option">
+											<input type="radio" class="address_radio" id="orlovskaya10" name="adress">
+											<label for="orlovskaya10">Брест, Орловская, 10</label>
+										</div>
+										<div class="address_option">
+											<input type="radio" class="address_radio" id="lenina2" name="adress">
+											<label for="lenina2">Пинск, Ленина, 2</label>
+										</div>
+									</div>
+									<div id="selected_address" class="selected_address">Брест, Карбышева, 32</div>
+								</div>
 								<input class="checkbox_btn" type="checkbox" id="permission" name="permission" value="permission">
-								<label for="permission">Я разрешаю ООО «ПараграфБрест» использовать указанные мной данные в маркетинговых целях.</label>
+								<label for="permission">Я разрешаю ООО «ПараграфБрест» использовать указанные мной данные в
+									маркетинговых целях.</label>
 								<p class="guest__profile_form_footer_text">Необходимо согласиться с условиями</p>
 							</div>
 							<input class="submit" type="submit" value="Отправить">
@@ -735,9 +769,13 @@
 						<p class="programm_title">Условия программы</p>
 						<div class="programm_main">
 							<div class="first_div">
-								<p style="font-weight: 600;" class="first_p">Карта гостя действует во всех кофейнях сети Paragraph Coffee.</p>
+								<p style="font-weight: 600;" class="first_p">Карта гостя действует во всех кофейнях сети Paragraph
+									Coffee.</p>
 								<p class="second_p">Все суммы покупок будут зачисляться на накопительный счет владельца карты.</p>
-								<p class="third_p"><span class="programm__bold_text">Размер кэшбэка зависит от общей суммы покупок</span> за весь период пользования Картой гостя, сделанных Вами с предъявлением данной карты в сети кофеен Paragraph Coffee, а также партнеров, и <span class="programm__bold_text">начисляется следующим образом:</span></p>
+								<p class="third_p"><span class="programm__bold_text">Размер кэшбэка зависит от общей суммы
+										покупок</span> за весь период пользования Картой гостя, сделанных Вами с предъявлением данной карты
+									в сети кофеен Paragraph Coffee, а также партнеров, и <span class="programm__bold_text">начисляется
+										следующим образом:</span></p>
 							</div>
 							<div class="programm__main_table_wrapper">
 								<table class="programm__main_table">
@@ -766,13 +804,22 @@
 								</table>
 							</div>
 							<div class="second_div">
-								<p class="second__div_p">Соответствующий <span class="programm__bold_text">процент от суммы заносится на бонусный счёт</span> владельца карты сразу же после совершения покупки.</p>
-								<p class="second__div_p" style="margin-top: 7px;"><span class="programm__bold_text">Баланс накопительного счета</span> можно узнать на личной странице сайта <a style="color: inherit;font-weight: 600;" href="#">paragraph.by</a> и у сотрудников кофеен.</p>
-								<p class="second__div_p" style="margin-top: 7px;"><span class="programm__bold_text">Участник программы вправе передавать Карту гостя</span> друзьям и близким, ведь так будет гораздо проще накопить большую сумму на счете.</p>
-								<p class="second__div_p" style="margin-top: 7px;"><span class="programm__bold_text">В случае потери или порчи карты</span> Вы можете обратиться к сотрудникам любой кофейни сети Paragraph Coffee с просьбой о её восстановлении.</p>
-								<p style="font-weight: 600;margin-top: 7px;" class="second__div_p">Стоимость восстановления карты — 3 б.р.</p>
+								<p class="second__div_p">Соответствующий <span class="programm__bold_text">процент от суммы заносится на
+										бонусный счёт</span> владельца карты сразу же после совершения покупки.</p>
+								<p class="second__div_p" style="margin-top: 7px;"><span class="programm__bold_text">Баланс
+										накопительного счета</span> можно узнать на личной странице сайта <a
+										style="color: inherit;font-weight: 600;" href="#">paragraph.by</a> и у сотрудников кофеен.</p>
+								<p class="second__div_p" style="margin-top: 7px;"><span class="programm__bold_text">Участник программы
+										вправе передавать Карту гостя</span> друзьям и близким, ведь так будет гораздо проще накопить
+									большую сумму на счете.</p>
+								<p class="second__div_p" style="margin-top: 7px;"><span class="programm__bold_text">В случае потери или
+										порчи карты</span> Вы можете обратиться к сотрудникам любой кофейни сети Paragraph Coffee с просьбой
+									о её восстановлении.</p>
+								<p style="font-weight: 600;margin-top: 7px;" class="second__div_p">Стоимость восстановления карты — 3
+									б.р.</p>
 							</div>
-							<p class="programm__footer_text">ООО «ПараграфБрест» оставляет за собой право в дальнейшем изменять условия программы.</p>
+							<p class="programm__footer_text">ООО «ПараграфБрест» оставляет за собой право в дальнейшем изменять
+								условия программы.</p>
 						</div>
 						<button id="programm__footer_btn" class="programm__footer_btn">Спасибо</button>
 					</div>
@@ -793,7 +840,8 @@
 					</ul>
 				</div>
 				<div class="footer__second_line">
-					<p class="footer__second_line_text">Управляется <a href="https://alldata.pro/" class="alldata_link">alldata.pro</a></p>
+					<p class="footer__second_line_text">Управляется <a href="https://alldata.pro/"
+							class="alldata_link">alldata.pro</a></p>
 					<ul class="footer__list">
 						<li class="footer__list_item"><a href="#" class="footer_link">Политика конфиденциальности</a></li>
 						<div class="circle"></div>
