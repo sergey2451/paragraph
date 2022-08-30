@@ -273,7 +273,7 @@ guestProfileCloseBtn.addEventListener('click', hideGuestProfile);
 
 const programmBtn = document.querySelector('#programm_btn');
 const programmWrapper = document.querySelector('#programm_wrapper');
-const programmCloseBtn = document.querySelector('#programm_close_btn');
+const programmCloseBtn = document.querySelector('#programm__close_btn');
 const programmFooterBtn = document.querySelector('#programm__footer_btn');
 
 function showProgramm() {

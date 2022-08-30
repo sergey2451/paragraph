@@ -2610,11 +2610,12 @@ input, select {
 	width: 100%;
 	overflow: auto;
 	background-color: rgba(0,0,0,0.4);
+	padding: 110px 0 122px;
 }
 
 @media (max-width: 769px) {
 	.programm_wrapper {
-		padding: 0 16px;
+		padding: 45px 16px 62px;
 	}
 }
 
