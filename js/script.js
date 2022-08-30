@@ -261,10 +261,12 @@ const guestProfileCloseBtn = document.querySelector('#guest__profile_close_btn')
 
 function showGuestProfile() {
 	guestProfileWrapper.classList.add('show');
+	document.querySelector('html').style.overflow = 'hidden';
 }
 
 function hideGuestProfile() {
 	guestProfileWrapper.classList.remove('show');
+	document.querySelector('html').style.overflow = 'auto';
 }
 
 guestProfileBtn.addEventListener('click', showGuestProfile);
@@ -278,10 +280,12 @@ const programmFooterBtn = document.querySelector('#programm__footer_btn');
 
 function showProgramm() {
 	programmWrapper.classList.add('show');
+	document.querySelector('html').style.overflow = 'hidden';
 }
 
 function hideProgramm() {
 	programmWrapper.classList.remove('show');
+	document.querySelector('html').style.overflow = 'auto';
 }
 
 programmBtn.addEventListener('click', showProgramm);
