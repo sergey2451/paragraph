@@ -3616,6 +3616,7 @@ input, select {
 
 .private__cabinet_tbody tr td {
 	height: 48px;
+	padding: 10px 8px;
 }
 
 .private__cabinet__btn_wrapper {
