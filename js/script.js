@@ -56,9 +56,7 @@ $(document).ready(function() {
         asNavFor: '.preview_slider',
         focusOnSelect: true,
     });
-});
 
-$(document).ready(function() {
 	$('.confectionery_slider').slick({
 		arrows: false,
 		dots: true,
@@ -77,11 +75,8 @@ $(document).ready(function() {
         asNavFor: '.confectionery_slider',
         focusOnSelect: true,
     });
-});
 
-
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
+	$(".owl-carousel").owlCarousel({
 		margin: 20,
 		navText: ["",""],
 
@@ -122,6 +117,7 @@ $(document).ready(function(){
 		}
 	});
 });
+
 
 const drinksItem = document.querySelector('#drinks_li');
 const dessertsItem = document.querySelector('#desserts_li');
@@ -370,3 +366,19 @@ yearOptionsList.forEach( o => {
 		selectedYear.style.color = 'rgba(255, 255, 255, 1)';
 	})
 });
+
+// const table = document.querySelector('#table');
+// const arrowDown = document.querySelector('.private__cabinet_table_arrow');
+// const arrowUp = document.querySelector('.private__cabinet_table_transform_arrow');
+// const privateCabinetTableTr = document.querySelector('#order_1');
+
+// arrowDown.addEventListener('click', () => {
+// 	console.log('Hello');
+// 	privateCabinetTableTr.classList.toggle('active');
+// });
+
+// for (let tBody of table.tBodies) {
+// 	console.log(tBody);
+// }
+
+console.log('hello');

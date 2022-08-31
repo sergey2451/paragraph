@@ -3939,6 +3939,18 @@ select {
 	width: 22.6%;
 }
 
+@media (max-width: 768px) {
+	.date {
+		width: 45%;
+	}
+}
+
+@media (max-width: 425px) {
+	.date {
+		width: 50%;
+	}
+}
+
 .buy {
 	width: 51.7%;
 }
@@ -3960,6 +3972,18 @@ select {
 }
 
 @media (max-width: 768px) {
+	.bonuses {
+		width: 45%;
+	}
+}
+
+@media (max-width: 425px) {
+	.bonuses {
+		width: 30%;
+	}
+}
+
+@media (max-width: 768px) {
 	.buy_column {
 		display: none;
 	}
@@ -3971,12 +3995,39 @@ select {
 }
 
 .private__cabinet_tbody tr {
-	font-weight: 500;
 	font-size: 18px;
 	line-height: 21px;
 	text-align: center;
 	color: #FFFFFF;
 	border-bottom: 1px solid #165659;
+}
+
+#time, #id_time {
+	font-weight: 400;
+}
+
+#purchase, #id_purchase {
+	font-weight: 500;
+}
+
+#bonuses, #id_bonuses {
+	font-weight: 600;
+}
+
+@media (max-width: 768px) {
+	#time, #purchase, #bonuses, #id_time, #id_bonuses, #id_purchase {
+		font-size: 16px;
+		line-height: 19px;
+	}
+}
+
+@media (max-width: 768px) {
+	.private__cabinet_tbody tr:nth-last-child(-n+3) {
+		display: none;
+	}
+	.private__cabinet_tbody tr:nth-last-child(-n+4) {
+		border-bottom: 0;
+	}
 }
 
 .private__cabinet_tbody tr td {
@@ -3990,8 +4041,69 @@ select {
 	margin: 50px auto 0;
 }
 
+@media (max-width: 768px) {
+	.private__cabinet__btn_wrapper {
+		padding-bottom: 38px;
+		margin: 16px auto 0;
+	}
+}
+
 @media (max-width: 425px) {
 	.private__cabinet__btn_wrapper {
 		width: 100%;
+	}
+}
+
+.private__cabinet_tbody .option {
+	background: #0D4749;
+}
+
+.private__cabinet_table_arrow {
+	background-image: url(assets/icons/arrow-for-select.svg);
+	background-repeat: no-repeat;
+	background-position: right 21.5px center;
+	display: none;
+	cursor: pointer;
+}
+
+.thead__arrow {
+	display: none;
+}
+
+.private__cabinet_table_transform_arrow {
+	background-image: url(assets/icons/arrow-for-select.svg);
+	background-repeat: no-repeat;
+	background-position: right 21.5px center;
+	transform: rotateX(180deg);
+	display: none;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	.thead__arrow {
+		display: block;
+	}
+
+	.private__cabinet_table_arrow {
+		display: block;
+	}
+
+	.private__cabinet_table_transform_arrow {
+		display: block;
+	}
+}
+
+.private__cabinet_tbody tr td.option_order {
+	padding: 13px 24px 14px 20px;
+	text-align: left;
+}
+
+.private__cabinet_tbody tr.option {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.private__cabinet_tbody tr.active~.option {
+		display: table-row;
 	}
 }
