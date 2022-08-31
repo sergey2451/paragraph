@@ -2263,11 +2263,11 @@ input,
 select {
 	font-family: 'Raleway', sans-serif;
 	font-style: normal;
+	cursor: pointer;
 }
 
 .guest__profile_wrapper {
-	/* display: none; */
-	display: block;
+	display: none;
 	align-items: center;
 	justify-content: center;
 	z-index: 2000;
@@ -2486,78 +2486,6 @@ select {
 	color: #FFFFFF;
 }
 
-.guest__profile_form_birthday {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 16px;
-}
-
-@media (max-width: 769px) {
-	.guest__profile_form_birthday {
-		display: none;
-	}
-}
-
-.bday {
-	width: 152px;
-	height: 50px;
-	background: #0D4749;
-	border: 1px solid #0D4749;
-	border-radius: 12px;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 150%;
-	letter-spacing: 0.02em;
-	color: #FFFFFF;
-	/* opacity: 0.5; */
-	padding-left: 20px;
-	text-indent: 5px;
-	appearance: none;
-	/* background: url(assets/icons/arrow-for-select.svg) no-repeat 120px center; */
-	outline: none;
-}
-
-.bday_disabled {
-	padding-top: 6px;
-	margin-top: 6px;
-	opacity: 1;
-}
-
-#date {
-	display: none;
-	background: #0D4749;
-	border: 1px solid #0D4749;
-	border-radius: 8px;
-	width: 100%;
-	height: 50px;
-	margin-top: 16px;
-	font-size: 18px;
-	line-height: 150%;
-	font-weight: 400;
-	letter-spacing: 0.02em;
-	color: #FFFFFF;
-	background-image: url(assets/icons/calendar.svg);
-	background-repeat: no-repeat;
-	background-position: 16px 11px;
-	padding: 10.5px 10.5px 10.5px 55px;
-	outline: none;
-}
-
-@media (max-width: 769px) {
-	#date {
-		display: block;
-	}
-}
-
-#date:focus {
-	border: 1px solid #118181;
-}
-
-#date::placeholder {
-	color: #FFFFFF;
-	opacity: 0.5;
-}
-
 #phone {
 	background: #0D4749;
 	border: 1px solid #0D4749;
@@ -2627,6 +2555,8 @@ select {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	margin: 16px 0 33px;
+	position: relative;
 }
 
 .select__box_address .address__options_container {
@@ -2644,13 +2574,15 @@ select {
 	transition: all 0.4s;
 	overflow: hidden;
 	order: 1;
+	position: absolute;
+    z-index: 30;
+    top: 56px;
 }
 
 .selected_address {
 	background: #0D4749;
 	border: 1px solid #0D4749;
 	border-radius: 8px;
-	margin-bottom: 6px;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 150%;
@@ -2658,6 +2590,8 @@ select {
 	color: #FFFFFF;
 	position: relative;
 	order: 0;
+	padding: 11px 0 12px 20px;
+	cursor: pointer;
 }
 
 .selected_address::after {
@@ -2672,6 +2606,12 @@ select {
 	right: 16.5px;
 	top: calc(50% - 14px/2);
 	transition: all 0.3s;
+}
+
+@media (max-width: 375px) {
+	.selected_address::after {
+		right: 5px;
+	}
 }
 
 .select__box_address .address__options_container.active {
@@ -2689,11 +2629,6 @@ select {
 	transition: 0.4s;
 }
 
-.selected_address {
-	padding: 11px 0 12px 20px;
-	cursor: pointer;
-}
-
 .select__box_address .address_option:hover {
 	background: #165659;
 }
@@ -2706,30 +2641,380 @@ select {
 	display: none;
 }
 
+.select__box_address .address__options_container.active~.selected_address {
+	border: 1px solid #118181;
+}
 
+.bg {
+	background: #165659;
+}
 
+/*--------------------------------------*/
 
+.guest__profile_form_birthday {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
+}
 
+@media (max-width: 769px) {
+	.guest__profile_form_birthday {
+		display: none;
+	}
+}
 
+.select__box_day {
+	display: flex;
+	flex-direction: column;
+	width: 152px;
+	position: relative;
+}
 
+.select__box_day .day__options_container {
+	background: #0D4749;
+	box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25);
+	border-radius: 12px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+	max-height: 0;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.4s;
+	overflow: hidden;
+	order: 1;
+	position: absolute;
+    z-index: 30;
+    top: 56px;
+}
 
+.select__box_day .day__options_container::-webkit-scrollbar {
+	width: 6px;
+	background: #165659;
+	border-radius: 0 12px 12px 0;
+}
 
+.select__box_day .day__options_container::-webkit-scrollbar-thumb {
+	background: #118181;
+	border-radius: 0 12px 12px 0;
+}
 
+.selected_day {
+	background: #0D4749;
+	border: 1px solid #0D4749;
+	border-radius: 12px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: rgba(255, 255, 255, 0.5);
+	position: relative;
+	order: 0;
+	padding: 10.5px 0 10.5px 20px;
+	cursor: pointer;
+}
 
+.selected_day::after {
+	content: "";
+	background: url(assets/icons/arrow-for-select.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	height: 14px;
+	width: 17.5px;
+	right: 16.5px;
+	top: calc(50% - 14px/2);
+	transition: all 0.3s;
+}
 
+.select__box_day .day__options_container.active {
+	max-height: 250px;
+	opacity: 1;
+	overflow-y: scroll;
+}
 
+.select__box_day .day__options_container.active+.selected_day::after {
+	transform: rotateX(180deg);
+}
 
+.select__box_day .day_option {
+	padding: 5px 0 5px 20px;
+	cursor: pointer;
+	transition: 0.4s;
+}
 
+.select__box_day .day_option:hover {
+	background: #165659;
+}
 
+.select__box_day label {
+	cursor: pointer;
+}
 
+.select__box_day .day_option .day_radio {
+	display: none;
+}
 
+.select__box_day .day__options_container.active~.selected_day {
+	border: 1px solid #118181;
+}
 
+.select__box_month {
+	display: flex;
+	flex-direction: column;
+	width: 152px;
+	position: relative;
+}
 
+.select__box_month .month__options_container {
+	background: #0D4749;
+	box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25);
+	border-radius: 12px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+	max-height: 0;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.4s;
+	overflow: hidden;
+	order: 1;
+	position: absolute;
+    z-index: 30;
+    top: 56px;
+}
 
+.select__box_month .month__options_container::-webkit-scrollbar {
+	width: 6px;
+	background: #165659;
+	border-radius: 0 12px 12px 0;
+}
 
+.select__box_month .month__options_container::-webkit-scrollbar-thumb {
+	background: #118181;
+	border-radius: 0 12px 12px 0;
+}
 
+.selected_month {
+	background: #0D4749;
+	border: 1px solid #0D4749;
+	border-radius: 12px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: rgba(255, 255, 255, 0.5);
+	position: relative;
+	order: 0;
+	padding: 10.5px 0 10.5px 20px;
+	cursor: pointer;
+}
 
+.selected_month::after {
+	content: "";
+	background: url(assets/icons/arrow-for-select.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	height: 14px;
+	width: 17.5px;
+	right: 16.5px;
+	top: calc(50% - 14px/2);
+	transition: all 0.3s;
+}
 
+.select__box_month .month__options_container.active {
+	max-height: 250px;
+	opacity: 1;
+	overflow-y: scroll;
+}
+
+.select__box_month .month__options_container.active+.selected_month::after {
+	transform: rotateX(180deg);
+}
+
+.select__box_month .month_option {
+	padding: 5px 0 5px 20px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.select__box_month .month_option:hover {
+	background: #165659;
+}
+
+.select__box_month label {
+	cursor: pointer;
+}
+
+.select__box_month .month_option .month_radio {
+	display: none;
+}
+
+.select__box_month .month__options_container.active~.selected_month {
+	border: 1px solid #118181;
+}
+
+.select__box_year {
+	display: flex;
+	flex-direction: column;
+	width: 152px;
+	position: relative;
+}
+
+.select__box_year .year__options_container {
+	background: #0D4749;
+	box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25);
+	border-radius: 12px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+	max-height: 0;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.4s;
+	overflow: hidden;
+	order: 1;
+	position: absolute;
+    z-index: 30;
+    top: 56px;
+}
+
+.select__box_year .year__options_container::-webkit-scrollbar {
+	width: 6px;
+	background: #165659;
+	border-radius: 0 12px 12px 0;
+}
+
+.select__box_year .year__options_container::-webkit-scrollbar-thumb {
+	background: #118181;
+	border-radius: 0 12px 12px 0;
+}
+
+.selected_year {
+	background: #0D4749;
+	border: 1px solid #0D4749;
+	border-radius: 12px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: rgba(255, 255, 255, 0.5);
+	position: relative;
+	order: 0;
+	padding: 10.5px 0 10.5px 20px;
+	cursor: pointer;
+}
+
+.selected_year::after {
+	content: "";
+	background: url(assets/icons/arrow-for-select.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	height: 14px;
+	width: 17.5px;
+	right: 16.5px;
+	top: calc(50% - 14px/2);
+	transition: all 0.3s;
+}
+
+.select__box_year .year__options_container.active {
+	max-height: 250px;
+	opacity: 1;
+	overflow-y: scroll;
+}
+
+.select__box_year .year__options_container.active+.selected_year::after {
+	transform: rotateX(180deg);
+}
+
+.select__box_year .year_option {
+	padding: 5px 0 5px 20px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.select__box_year .year_option:hover {
+	background: #165659;
+}
+
+.select__box_year label {
+	cursor: pointer;
+}
+
+.select__box_year .year_option .year_radio {
+	display: none;
+}
+
+.select__box_year .year__options_container.active~.selected_year {
+	border: 1px solid #118181;
+}
+
+/*--------------------------------------*/
+
+#date {
+	display: none;
+}
+
+@media (max-width: 769px) {
+	#date {
+		display: block;
+	}
+}
+
+#date {
+	margin-top: 16px;
+	background: #0D4749;
+	border: 1px solid #0D4749;
+	border-radius: 12px;
+	padding: 10.5px 10.5px 10.5px 55px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+	width: 100%;
+	outline: none;
+	background-image: url(assets/icons/calendar.svg);
+	background-repeat: no-repeat;
+	background-position: 17px center;
+	background-size: 28px 28px;
+	cursor: pointer;
+}
+
+#date::-webkit-calendar-picker-indicator {
+	color: rgba(0, 0, 0, 0);
+	opacity: 1;
+	background: url(assets/icons/calendar.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 42px;
+	cursor: pointer;
+}
+
+#date:focus {
+	border: 1px solid #118181;
+}
+
+#date::placeholder {
+	color: #FFFFFF;
+	opacity: 0.5;
+}
+
+/*--------------------------------------*/
 
 .checkbox_btn {
 	position: absolute;

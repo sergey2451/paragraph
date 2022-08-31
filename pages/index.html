@@ -8,6 +8,7 @@
 	<title>Сеть кофеен Paragraph - Минск, Брест, Пинск, Кобрин</title>
 	<link rel="stylesheet" href="../style.css">
 	<link rel="icon" href="../assets/icons/favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
 <body>
@@ -649,71 +650,235 @@
 								</div>
 								<p class="guest__profile_birthday_text">День рождения</p>
 								<div class="guest__profile_form_birthday">
-									<select class="bday" id="birth_day" name="birth_day" required>
-										<option class="bday_disabled" value="День" hidden disabled selected>День</option>
-										<option value="1">01</option>
-										<option value="2">02</option>
-										<option value="3">03</option>
-										<option value="4">04</option>
-										<option value="5">05</option>
-										<option value="6">06</option>
-										<option value="7">07</option>
-										<option value="8">08</option>
-										<option value="9">09</option>
-										<option value="10">10</option>
-										<option value="11">11</option>
-										<option value="12">12</option>
-										<option value="13">13</option>
-										<option value="14">14</option>
-										<option value="15">15</option>
-										<option value="16">16</option>
-										<option value="17">17</option>
-										<option value="18">18</option>
-										<option value="19">19</option>
-										<option value="20">20</option>
-										<option value="21">21</option>
-										<option value="22">22</option>
-										<option value="23">23</option>
-										<option value="24">24</option>
-										<option value="25">25</option>
-										<option value="26">26</option>
-										<option value="27">27</option>
-										<option value="28">28</option>
-										<option value="29">29</option>
-										<option value="30">30</option>
-										<option value="31">31</option>
-									</select>
-									<select class="bday" id="birth_month" name="birth_month" required>
-										<option value="Месяц" hidden disabled selected>Месяц</option>
-										<option value="1">Январь</option>
-										<option value="2">Февраль</option>
-										<option value="3">Март</option>
-										<option value="4">Апрель</option>
-										<option value="5">Май</option>
-										<option value="6">Июнь</option>
-										<option value="7">Июль</option>
-										<option value="8">Август</option>
-										<option value="9">Сентябрь</option>
-										<option value="10">Октябрь</option>
-										<option value="11">Ноябрь</option>
-										<option value="12">Декабрь</option>
-									</select>
-									<select class="bday" id="birth_year" name="birth_year" required>
-										<option value="Год" hidden disabled selected>Год</option>
-										<option value="2004">2004</option>
-										<option value="2003">2003</option>
-										<option value="2002">2002</option>
-										<option value="2001">2001</option>
-										<option value="2000">2000</option>
-										<option value="1999">1999</option>
-										<option value="1998">1998</option>
-										<option value="1997">1997</option>
-										<option value="1996">1996</option>
-										<option value="1995">1995</option>
-										<option value="1994">1994</option>
-									</select>
+									<div class="select__box_day">
+										<div id="day__options_container" class="day__options_container">
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="01" name="day">
+												<label for="01">01</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="02" name="day">
+												<label for="02">02</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="03" name="day">
+												<label for="03">03</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="04" name="day">
+												<label for="04">04</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="05" name="day">
+												<label for="05">05</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="06" name="day">
+												<label for="06">06</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="07" name="day">
+												<label for="07">07</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="08" name="day">
+												<label for="08">08</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="09" name="day">
+												<label for="09">09</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="10" name="day">
+												<label for="10">10</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="11" name="day">
+												<label for="11">11</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="12" name="day">
+												<label for="12">12</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="13" name="day">
+												<label for="13">13</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="14" name="day">
+												<label for="14">14</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="15" name="day">
+												<label for="15">15</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="16" name="day">
+												<label for="16">16</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="17" name="day">
+												<label for="17">17</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="18" name="day">
+												<label for="18">18</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="19" name="day">
+												<label for="19">19</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="20" name="day">
+												<label for="20">20</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="21" name="day">
+												<label for="21">21</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="22" name="day">
+												<label for="22">22</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="23" name="day">
+												<label for="23">23</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="24" name="day">
+												<label for="24">24</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="25" name="day">
+												<label for="25">25</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="26" name="day">
+												<label for="26">26</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="27" name="day">
+												<label for="27">27</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="28" name="day">
+												<label for="28">28</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="29" name="day">
+												<label for="29">29</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="30" name="day">
+												<label for="30">30</label>
+											</div>
+											<div class="day_option">
+												<input type="radio" class="day_radio" id="31" name="day">
+												<label for="31">31</label>
+											</div>
+										</div>
+										<div id="selected_day" class="selected_day">День</div>
+									</div>
+									<div class="select__box_month">
+										<div id="month__options_container" class="month__options_container">
+											<div class="month_option">
+												<input type="radio" class="month_radio" id="Январь" name="month">
+												<label for="Январь">Январь</label>
+											</div>
+											<div class="month_option">
+												<input type="radio" class="month_radio" id="Февраль" name="month">
+												<label for="Февраль">Февраль</label>
+											</div>
+											<div class="month_option">
+												<input type="radio" class="month_radio" id="Март" name="month">
+												<label for="Март">Март</label>
+											</div>
+											<div class="month_option">
+												<input type="radio" class="month_radio" id="Апрель" name="month">
+												<label for="Апрель">Апрель</label>
+											</div>
+											<div class="month_option">
+												<input type="radio" class="month_radio" id="Май" name="month">
+												<label for="Май">Май</label>
+											</div>
+											<div class="month_option">
+												<input type="radio" class="month_radio" id="Июнь" name="month">
+												<label for="Июнь">Июнь</label>
+											</div>
+											<div class="month_option">
+												<input type="radio" class="month_radio" id="Июль" name="month">
+												<label for="Июль">Июль</label>
+											</div>
+											<div class="month_option">
+												<input type="radio" class="month_radio" id="Август" name="month">
+												<label for="Август">Август</label>
+											</div>
+											<div class="month_option">
+												<input type="radio" class="month_radio" id="Сентябрь" name="month">
+												<label for="Сентябрь">Сентябрь</label>
+											</div>
+											<div class="month_option">
+												<input type="radio" class="month_radio" id="Октябрь" name="month">
+												<label for="Октябрь">Октябрь</label>
+											</div>
+											<div class="month_option">
+												<input type="radio" class="month_radio" id="Ноябрь" name="month">
+												<label for="Ноябрь">Ноябрь</label>
+											</div>
+											<div class="month_option">
+												<input type="radio" class="month_radio" id="Декабрь" name="month">
+												<label for="Декабрь">Декабрь</label>
+											</div>
+										</div>
+										<div id="selected_month" class="selected_month">Месяц</div>
+									</div>
+									<div class="select__box_year">
+										<div id="year__options_container" class="year__options_container">
+											<div class="year_option">
+												<input type="radio" class="year_radio" id="2004" name="year">
+												<label for="2004">2004</label>
+											</div>
+											<div class="year_option">
+												<input type="radio" class="year_radio" id="2003" name="year">
+												<label for="2003">2003</label>
+											</div>
+											<div class="year_option">
+												<input type="radio" class="year_radio" id="2002" name="year">
+												<label for="2002">2002</label>
+											</div>
+											<div class="year_option">
+												<input type="radio" class="year_radio" id="2001" name="year">
+												<label for="2001">2001</label>
+											</div>
+											<div class="year_option">
+												<input type="radio" class="year_radio" id="2000" name="year">
+												<label for="2000">2000</label>
+											</div>
+											<div class="year_option">
+												<input type="radio" class="year_radio" id="1999" name="year">
+												<label for="1999">1999</label>
+											</div>
+											<div class="year_option">
+												<input type="radio" class="year_radio" id="1998" name="year">
+												<label for="1998">1998</label>
+											</div>
+											<div class="year_option">
+												<input type="radio" class="year_radio" id="1997" name="year">
+												<label for="1997">1997</label>
+											</div>
+											<div class="year_option">
+												<input type="radio" class="year_radio" id="1996" name="year">
+												<label for="1996">1996</label>
+											</div>
+											<div class="year_option">
+												<input type="radio" class="year_radio" id="1995" name="year">
+												<label for="1995">1995</label>
+											</div>
+										</div>
+										<div id="selected_year" class="selected_year">Год</div>
+									</div>
 								</div>
-								<input type="date" id="date" name="date" placeholder="Дата" value="Дата" required>
+								<input id="date" name="date" placeholder="Дата" type="text" onfocus="(this.type='date')" required>
 								<input type="tel" id="phone" name="phone" placeholder="Номер телефона" required>
 								<input type="email" id="email" placeholder="Email" required>
 								<p class="select__coffee_houses_text">Выберите кофейню, в которой вы приобрели карту:</p>
@@ -741,7 +906,7 @@
 										</div>
 										<div class="address_option">
 											<input type="radio" class="address_radio" id="naberezhnaya2" name="adress">
-											<label for="naberezhnaya2">Брест, набережная Ф.Скорины, 2</label>
+											<label for="naberezhnaya2">Брест, набережная Ф. Скорины, 2</label>
 										</div>
 										<div class="address_option">
 											<input type="radio" class="address_radio" id="orlovskaya10" name="adress">

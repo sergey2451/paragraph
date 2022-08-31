@@ -299,11 +299,74 @@ const addressOptionsList = document.querySelectorAll('.address_option');
 
 selectedAddress.addEventListener('click', () => {
 	addressOptionsContainer.classList.toggle('active');
+
+	for (let i = 0; i < addressOptionsList.length; i++) {
+		if (addressOptionsList[i].querySelector('label').innerHTML === selectedAddress.innerHTML) {
+			addressOptionsList[i].classList.add('bg');
+		}
+	}
 });
 
 addressOptionsList.forEach( o => {
 	o.addEventListener('click', () => {
 		selectedAddress.innerHTML = o.querySelector('label').innerHTML;
 		addressOptionsContainer.classList.remove('active');
+
+		for (let i = 0; i < addressOptionsList.length; i++) {
+			addressOptionsList[i].classList.remove('bg');
+		}
+
 	})
-})
+});
+
+
+const selectedDay = document.querySelector('#selected_day');
+const selectedMonth = document.querySelector('#selected_month');
+const selectedYear = document.querySelector('#selected_year');
+
+
+const dayOptionsContainer = document.querySelector('#day__options_container');
+const monthOptionsContainer = document.querySelector('#month__options_container');
+const yearOptionsContainer = document.querySelector('#year__options_container');
+
+const dayOptionsList = document.querySelectorAll('.day_option');
+const monthOptionsList = document.querySelectorAll('.month_option');
+const yearOptionsList = document.querySelectorAll('.year_option');
+
+selectedDay.addEventListener('click', () => {
+	dayOptionsContainer.classList.toggle('active');
+});
+
+dayOptionsList.forEach( o => {
+	o.addEventListener('click', () => {
+		selectedDay.innerHTML = o.querySelector('label').innerHTML;
+		dayOptionsContainer.classList.remove('active');
+		selectedDay.style.color = 'rgba(255, 255, 255, 1)';
+	})
+});
+
+
+selectedMonth.addEventListener('click', () => {
+	monthOptionsContainer.classList.toggle('active');
+});
+
+monthOptionsList.forEach( o => {
+	o.addEventListener('click', () => {
+		selectedMonth.innerHTML = o.querySelector('label').innerHTML;
+		monthOptionsContainer.classList.remove('active');
+		selectedMonth.style.color = 'rgba(255, 255, 255, 1)';
+	})
+});
+
+
+selectedYear.addEventListener('click', () => {
+	yearOptionsContainer.classList.toggle('active');
+});
+
+yearOptionsList.forEach( o => {
+	o.addEventListener('click', () => {
+		selectedYear.innerHTML = o.querySelector('label').innerHTML;
+		yearOptionsContainer.classList.remove('active');
+		selectedYear.style.color = 'rgba(255, 255, 255, 1)';
+	})
+});
