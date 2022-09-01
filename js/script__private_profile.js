@@ -1,22 +1,3 @@
-// const arrowDown = document.querySelector('.private__cabinet_table_arrow');
-// const arrowUp = document.querySelector('.private__cabinet_table_transform_arrow');
-// const privateCabinetTableTr = document.querySelector('#order_1');
-// const optionOrder_1 = document.querySelector('#id_purchase');
-// const idTime = document.querySelector('#id_time');
-// const idBonuses = document.querySelector('#id_bonuses');
-
-// arrowDown.addEventListener('click', () => {
-// 	privateCabinetTableTr.classList.add('active');
-// 	optionOrder_1.innerHTML = privateCabinetTableTr.querySelector('.buy_column').innerHTML;
-// 	idTime.innerHTML = privateCabinetTableTr.querySelector('#time').innerHTML;
-// 	idBonuses.innerHTML = privateCabinetTableTr.querySelector('#bonuses').innerHTML;
-// });
-
-// arrowUp.addEventListener('click', () => {
-// 	privateCabinetTableTr.classList.remove('active');
-// })
-
-
 const arrowsDown = document.querySelectorAll('.private__cabinet_table_arrow');
 const arrowsUp = document.querySelectorAll('.private__cabinet_table_transform_arrow');
 const orders = document.querySelectorAll('#order');
@@ -40,3 +21,4 @@ for (let i = 0; i < arrowsUp.length; i++) {
 		arrowsUp[i].closest(`#for_order`).nextElementSibling.style.display = 'none';
 	})
 }
+

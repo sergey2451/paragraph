@@ -367,18 +367,84 @@ yearOptionsList.forEach( o => {
 	})
 });
 
-// const table = document.querySelector('#table');
-// const arrowDown = document.querySelector('.private__cabinet_table_arrow');
-// const arrowUp = document.querySelector('.private__cabinet_table_transform_arrow');
-// const privateCabinetTableTr = document.querySelector('#order_1');
 
-// arrowDown.addEventListener('click', () => {
-// 	console.log('Hello');
-// 	privateCabinetTableTr.classList.toggle('active');
-// });
+const quiches = [
+	{
+		'id': 'quiche_1',
+		'images': [
+			'../assets/images/quiche_1_1.jpg',
+			'../assets/images/quiche_1_2.jpg',
+		],
+		'food__popup_description_title': 'Шпинат и брынза',
+		'weight': '125 г',
+		'price': '6 руб. 50 коп.',
+		'description__text': 'Пирог на рассыпчатой песочной основе с начинкой из свежего шпината и брынзы под сливочно-яичной заливкой.',
+		'compound__text': 'Мука, масло сливочное, яйцо, шпинат, брынза, сыр, сливки, сметана, соль, перец.',
+		'calories': '245,07',
+		'protein': '8,35',
+		'fats': '18,31',
+		'carbohydrates': '15,17',
+	},
+	{
+		'id': 'quiche_2',
+		'images': [
+			'../assets/images/quiche_2_1.jpg',
+			'../assets/images/quiche_2_2.jpg',
+			'../assets/images/quiche_2_3.jpg',
+		],
+		'food__popup_description_title': 'Груша и голубой сыр',
+		'weight': '130 г',
+		'price': '6 руб. 50 коп.',
+		'description__text': 'Открытый французский пирог на рассыпчатой песочной основе с начинкой из грудинки, груши и голубого сыра под сливочно-яичной заливкой.',
+		'compound__text': 'Мука, масло сливочное, яйцо, грудинка, сыр, груша, сыр с голубой плесенью, сливки, сметана, орегано, тимьян, соль, перец.',
+		'calories': '264,34',
+		'protein': '7,18',
+		'fats': '16,72',
+		'carbohydrates': '16,62',
+	}
+];
 
-// for (let tBody of table.tBodies) {
-// 	console.log(tBody);
-// }
+const foodPopupWrapper = document.querySelector('#food__popup_wrapper');
+const foodPopupCloseBtn = document.querySelector('#food__popup_close_btn');
+const foodPopupSlider = document.querySelector('#food__popup_slider');
 
-console.log('hello');
+document.addEventListener('click', (event) => {
+	if (event.target.closest('a').classList.contains('food__images_link')) {
+		foodPopupWrapper.style.display = 'flex';
+		document.querySelector('html').style.overflow = 'hidden';
+
+		for (let quiche of quiches) {
+			if (quiche.id === event.target.closest('a').id) {
+				foodPopupWrapper.querySelector('#food__popup_description_title').innerHTML = quiche.food__popup_description_title;
+				foodPopupWrapper.querySelector('#wieght').innerHTML = quiche.weight;
+				foodPopupWrapper.querySelector('#price').innerHTML = quiche.price;
+				foodPopupWrapper.querySelector('#description__text').innerHTML = quiche.description__text;
+				foodPopupWrapper.querySelector('#compound__text').innerHTML = quiche.compound__text;
+				foodPopupWrapper.querySelector('#calories').innerHTML = quiche.calories;
+				foodPopupWrapper.querySelector('#protein').innerHTML = quiche.protein;
+				foodPopupWrapper.querySelector('#fats').innerHTML = quiche.fats;
+				foodPopupWrapper.querySelector('#carbohydrates').innerHTML = quiche.carbohydrates;
+
+				for (let img of quiche.images) {
+					let food__popup_slider_item = document.createElement('div');
+					food__popup_slider_item.className = 'food__popup_slider_item';
+					let food__popup_img = document.createElement('img');
+					food__popup_img.src = img;
+					food__popup_slider_item.appendChild(food__popup_img);
+					foodPopupSlider.appendChild(food__popup_slider_item);
+				}
+			}
+		}
+	}
+
+	$('.food__popup_slider').slick({
+		arrows: false,
+	});
+})
+
+foodPopupCloseBtn.addEventListener('click', () => {
+	foodPopupWrapper.style.display = 'none';
+	document.querySelector('html').style.overflow = 'auto';
+	foodPopupSlider.innerHTML = '';
+	foodPopupSlider.className = 'food__popup_slider';
+});

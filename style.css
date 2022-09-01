@@ -42,13 +42,10 @@
 body {
 	font-family: 'Raleway', sans-serif;
 	font-style: normal;
-}
-
-html {
 	overflow-x: hidden;
 }
 
-body {
+html {
 	overflow-x: hidden;
 }
 
@@ -121,12 +118,6 @@ a {
 	.nav.open~.overlay .header {
 		z-index: 1000;
 		box-shadow: none;
-	}
-}
-
-@media (max-width: 375px) {
-	.header {
-		max-width: 375px;
 	}
 }
 
@@ -3281,25 +3272,6 @@ select {
 	text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .programm__footer_btn {
 	display: block;
 	width: 100%;
@@ -3320,14 +3292,6 @@ select {
 .programm__footer_btn:hover {
 	background-color: #0D4749;
 }
-
-
-
-
-
-
-
-
 
 .show {
 	display: flex;
@@ -4106,4 +4070,337 @@ select {
 	.private__cabinet_tbody tr.active~.option {
 		display: table-row;
 	}
+}
+
+/*----------------FOOD_POPUP----------------*/
+
+.food__popup_wrapper {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 2000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 50px 0 50px;
+}
+
+@media (max-width: 992px) {
+	.food__popup_wrapper {
+		align-items: baseline;
+	}
+}
+
+@media (max-width: 769px) {
+	.food__popup_wrapper {
+		padding: 50px 16px 50px;
+	}
+}
+
+.food__popup_content {
+	display: flex;
+	z-index: 5;
+	position: relative;
+	height: 450px;
+	background: #165659;
+	box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.25);
+	border-radius: 12px;
+}
+
+@media (max-width: 992px) {
+	.food__popup_content {
+		margin: auto;
+		flex-direction: column;
+		min-height: 80vh;
+	}
+}
+
+.food__popup_close_btn {
+	position: absolute;
+	right: -12px;
+	top: -13px;
+	z-index: 10;
+	width: 40px;
+	height: 40px;
+	background: #FFFFFF;
+	box-shadow: 0px 3.09434px 7.73585px rgba(0, 0, 0, 0.15);
+	border: none;
+	border-radius: 39.1795px;
+	cursor: pointer;
+	background-image: url(assets/icons/close_btn.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.food__popup_slider {
+	width: 450px;
+	min-height: 450px;
+}
+
+@media (max-width: 576px) {
+	.food__popup_slider {
+		width: 340px;
+		min-height: 340px;
+	}
+}
+
+@media (max-width: 373px) {
+	.food__popup_slider {
+		width: 280px;
+		min-height: 280px;
+	}
+}
+
+.food__popup_slider .slick-list {
+	overflow: hidden;
+	border-radius: 12px 0 0 12px;
+}
+
+@media (max-width: 992px) {
+	.food__popup_slider .slick-list {
+		border-radius: 0;
+	}
+}
+
+.food__popup_slider .slick-list .slick-track {
+	display: flex;
+}
+
+.food__popup_slider_item {
+	height: auto;
+}
+
+@media (max-width: 576px) {
+	.food__popup_slider_item img {
+		width: 100%;
+	}
+}
+
+.food__popup_description {
+	width: 450px;
+	border-radius: 0 12px 12px 0;
+	overflow-y: auto;
+	padding: 35px 28px 35px 28px;
+	outline: none;
+}
+
+@media (max-width: 992px) {
+	.food__popup_description {
+		padding: 20px;
+	}
+}
+
+@media (max-width: 576px) {
+	.food__popup_description {
+		width: 340px;
+	}
+}
+
+@media (max-width: 373px) {
+	.food__popup_description {
+		width: 280px;
+	}
+}
+
+.food__popup_description::-webkit-scrollbar {
+	width: 8px;
+	background-color: #082627;
+	border-radius: 0 8px 8px 0;
+}
+
+.food__popup_description::-webkit-scrollbar-thumb {
+    background-color: #0D4749;
+    outline: none;
+	border-radius: 0 8px 8px 0;
+}
+
+.food__popup_description_title {
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 31px;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+}
+
+@media (max-width: 992px) {
+	.food__popup_description_title {
+		font-size: 20px;
+	}
+}
+
+.weight_price_wrapper {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 153.88%;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+	margin: 14px 0 20px;
+}
+
+@media (max-width: 992px) {
+	.weight_price_wrapper {
+		font-size: 18px;
+		margin: 5px 0 15px;
+	}
+}
+
+.weight {
+	display: inline-block;
+}
+
+.price {
+	display: inline-block;
+	font-weight: 600;
+}
+
+.description__text_wrapper {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+	border-bottom: 1px solid #118181;
+	padding-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+	.description__text_wrapper {
+		font-size: 16px;
+		padding-bottom: 15px;
+	}
+}
+
+.description__text {
+	font-weight: 400;
+}
+
+.compound__text_wrapper {
+	padding: 20px 0 20px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+	border-bottom: 1px solid #118181;
+}
+
+@media (max-width: 992px) {
+	.compound__text_wrapper {
+		padding: 15px 0 15px;
+		font-size: 16px;
+	}
+}
+
+.compound__text {
+	font-weight: 400;
+}
+
+.nutritional__value_text_wrapper {
+	padding-top: 20px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+}
+
+@media (max-width: 992px) {
+	.nutritional__value_text_wrapper {
+		font-size: 16px;
+		padding-top: 15px;
+	}
+}
+
+.calories {
+	font-weight: 400;
+}
+
+.protein {
+	font-weight: 400;
+}
+
+.fats {
+	font-weight: 400;
+}
+
+.carbohydrates {
+	font-weight: 400;
+}
+
+
+
+/* .preview_slider .slick-list {
+	overflow: hidden;
+	border-radius: 12px;
+} */
+/* 
+.preview_slider .slick-list .slick-track {
+	display: flex;
+} */
+
+.preview_slider .slick-dots {
+	display: block;
+	padding: 0 100px;
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (max-width: 1226px) {
+	.preview_slider .slick-dots {
+		padding: 0 65px;
+	}
+}
+
+@media (max-width: 350px) {
+	.preview_slider .slick-dots {
+		padding: 0;
+	}
+}
+
+@media (max-width: 992px) {
+	.preview_slider .slick-dots {
+		justify-content: center;
+		margin-top: 15px;
+	}
+
+	.preview_slider .slick-dots li {
+		display: none;
+	}
+
+	.preview_slider .slick-dots li.slick-active {
+		display: block;
+	}
+}
+
+.preview_slider .slick-dots li {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 23px;
+	opacity: 0.5;
+	color: #FFFFFF;
+}
+
+.preview_slider .slick-dots li:hover {
+	cursor: pointer;
+}
+
+@media (max-width: 992px) {
+	.preview_slider .slick-dots li {
+		font-size: 18px;
+	}
+}
+
+.preview_slider .slick-dots li.slick-active {
+	font-weight: 700;
+	opacity: 1;
+}
+
+.preview__slider_item img {
+	display: block;
+	width: 100%;
 }
